@@ -26,11 +26,13 @@ class Forms extends Component{
           <Form.Item className={ style.formGroup } label="姓名">
             {
               getFieldDecorator('name', {
-                rules: [{
-                  message: '请输入姓名',
-                  required: true,
-                  whitespace: true
-                }]
+                rules: [
+                  {
+                    message: '请输入姓名',
+                    required: true,
+                    whitespace: true
+                  }
+                ]
               })(
                 <Input />
               )
