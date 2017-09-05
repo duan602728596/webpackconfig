@@ -1,0 +1,56 @@
+/* header style */
+.logo, .nav, .humanInformation
+  position: absolute
+.logo
+  left: 10px
+  top: 12px
+  height: 25px
+.nav, .nav ul, .nav li, .nav a
+  height: 50px
+.nav
+  top: 0
+  left: 180px
+  li
+    float: left
+  a
+    display: block
+    padding: 0 10px
+    font-size: 16px
+    line-height: 50px
+    color: rgba(255, 255, 255, .8)
+    -webkit-transition: color .5s, background-color .5s
+    transition: color .5s, background-color .5s
+    &:hover
+      color: rgba(255, 255, 255, 1)
+      text-decoration: none
+    &.navActive
+      background-color: rgb(34, 91, 238)
+      color: rgba(255, 255, 255, 1)
+      text-decoration: none
+  span
+    margin-left: 4px
+    vertical-align: 2px
+
+/* 登录人信息 */
+.humanInformation
+  right: 30px
+  top: 14px
+  line-height: 16px
+.human, .username
+  cursor: default
+.human
+  font-size: 18px
+.username
+  margin: 0 20px 0 5px
+  font-size: 14px
+  vertical-align: 2px
+.tools
+  border: none
+  font-size: 16px
+  background-color: transparent
+  color: rgba(255, 255, 255, .8)
+  cursor: pointer
+  -webkit-transition: color .5s
+  transition: color .5s
+  &:hover
+    color: rgba(255, 255, 255, 1)
