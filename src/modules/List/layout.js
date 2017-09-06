@@ -33,7 +33,7 @@ const options: {
     id: 's2',
     name: '导航菜单2',
     url: '/List/S2',
-    icon: <i className={ icon.cog } />
+    icon: icon.cog
   },
   {
     id: 's3',
