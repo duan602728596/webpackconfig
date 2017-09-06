@@ -13,7 +13,7 @@ import style from './style.sass';
 import { listDisplayChange } from '../store/reducer';
 
 /* state */
-const state: Object = createStructuredSelector({
+const state: Function = createStructuredSelector({
   listDisplay: createSelector(
     (state: Object): Array | Object=>state.get('home').get('listDisplay'),
     (data: Array | Object): Array=>data instanceof Array ? data : data.toJS()
@@ -21,7 +21,7 @@ const state: Object = createStructuredSelector({
 });
 
 /* dispatch */
-const dispatch: Object = (dispatch: Function): Object=>({
+const dispatch: Function = (dispatch: Function): Object=>({
   action: bindActionCreators({
     listDisplayChange
   }, dispatch)
