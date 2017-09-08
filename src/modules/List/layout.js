@@ -7,8 +7,9 @@ import Sider from '../../components/Sider/index';
 import Content from '../../components/Content/index';
 import Title from '../../components/Title/index';
 import asyncModule from '../../router/asyncModule';
-import Index from 'bundle-loader?lazy&name=list!./Index/index';
 import icon from '../../components/Icon/style.sass';
+import Index from 'bundle-loader?lazy&name=list!./Index/index';
+import reducer from 'bundle-loader?lazy&name=list!./store/reducer';
 
 /* 配置二、三级导航菜单 */
 const options: {
@@ -61,11 +62,11 @@ class Home extends Component{
         <Sider options={ options } />
         <Content>
           <Switch>
-            <Route path="/List" component={ asyncModule(Index) } exact />
-            <Route path="/List/S1" component={ asyncModule(Index) } exact />
-            <Route path="/List/S2" component={ asyncModule(Index) } exact />
-            <Route path="/List/S3/C1" component={ asyncModule(Index) } exact />
-            <Route path="/List/S3/C2" component={ asyncModule(Index) } exact />
+            <Route path="/List" component={ asyncModule(Index, reducer) } exact />
+            <Route path="/List/S1" component={ asyncModule(Index, reducer) } exact />
+            <Route path="/List/S2" component={ asyncModule(Index, reducer) } exact />
+            <Route path="/List/S3/C1" component={ asyncModule(Index, reducer) } exact />
+            <Route path="/List/S3/C2" component={ asyncModule(Index, reducer) } exact />
           </Switch>
         </Content>
       </Main>

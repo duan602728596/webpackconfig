@@ -1,11 +1,16 @@
 // @flow
+import { combineReducers } from 'redux-immutable';
 import homeReducer from '../modules/Home/store/reducer';
-import listReducer from '../modules/List/store/reducer';
 
 /* reducers */
 const reducers: Object = {
-  ...homeReducer,     // home
-  ...listReducer      // list
+  ...homeReducer
 };
 
-export default reducers;
+/* 创建reducer */
+export function createReducer(asyncReducer: Object): Function{
+  return combineReducers({
+    ...reducers,
+    ...asyncReducer
+  });
+}
