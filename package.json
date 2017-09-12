@@ -19,7 +19,7 @@
     "mime-types": "^2.1.17"
   },
   "devDependencies": {
-    "antd": "^2.13.0",
+    "antd": "^2.13.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.4.0",
