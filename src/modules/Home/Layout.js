@@ -6,7 +6,7 @@ import Content from '../../components/Content/index';
 import Title from '../../components/Title/index';
 import Index from './Index/index';
 
-class Home extends Component{
+class ModuleLayout extends Component{
   render(): Object{
     return(
       <Main>
@@ -22,4 +22,4 @@ class Home extends Component{
   }
 }
 
-export default Home;
+export default ModuleLayout;

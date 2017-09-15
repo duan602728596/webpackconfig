@@ -1,9 +1,9 @@
 // @flow
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '../modules/Home/layout';
-import List from '../modules/List/layout';
-import Form from '../modules/Form/layout';
+import Home from '../modules/Home/Layout';
+import List from '../modules/List/Layout';
+import Form from '../modules/Form/Layout';
 
 /**
  * 路由模块

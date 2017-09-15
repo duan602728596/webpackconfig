@@ -28,7 +28,7 @@ const options: {
   }
 ];
 
-class Home extends Component{
+class ModuleLayout extends Component{
   render(): Object{
     return(
       <Main>
@@ -45,4 +45,4 @@ class Home extends Component{
   }
 }
 
-export default Home;
+export default ModuleLayout;
