@@ -46,7 +46,7 @@ class Sider extends Component{
     return arr.map((item: Object, index: number): Object=>{
       if('children' in item && item.children.length > 0){
         // 当有children时，返回Menu.SubMenu，里面包裹Menu.Item
-        return(
+        return (
           <Menu.SubMenu key={ item.id } title={
             <span className={ commonStyle.clearfix }>
               { this.hasIcon(item) }
@@ -58,7 +58,7 @@ class Sider extends Component{
         );
       }else{
         // 当没有children时，返回Menu.Item
-        return(
+        return (
           <Menu.Item key={ item.id }>
             <Link className={ style.link } to={ item.url }>
               { this.hasIcon(item) }
@@ -72,7 +72,7 @@ class Sider extends Component{
   render(): Object{
     const options: Array = this.props.options || [];
     const sk = this.getSelectKey(options);
-    return(
+    return (
       <ErrorBoundary>
         <Layout.Sider className={ style.sider } width={ 180 }>
           <Menu theme="light" mode="inline" defaultSelectedKeys={ [sk] } style={{ borderRight: 'none' }}>

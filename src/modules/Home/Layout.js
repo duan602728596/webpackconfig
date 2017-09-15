@@ -8,7 +8,7 @@ import Index from './Index/index';
 
 class ModuleLayout extends Component{
   render(): Object{
-    return(
+    return (
       <Main>
         <Title />
         <Content>

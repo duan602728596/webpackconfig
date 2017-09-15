@@ -30,7 +30,7 @@ class ErrorBoundary extends Component{
   }
   render(): Object{
     if(this.state.hasError){
-      return(
+      return (
         <Content>
           <h1 className={ style.title }>错误警告：</h1>
           <h2 className={ style.secondTitle }>Error:</h2>

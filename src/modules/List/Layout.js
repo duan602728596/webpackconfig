@@ -56,7 +56,7 @@ const options: {
 
 class ModuleLayout extends Component{
   render(): Object{
-    return(
+    return (
       <Main>
         <Title>列表展示</Title>
         <Sider options={ options } />

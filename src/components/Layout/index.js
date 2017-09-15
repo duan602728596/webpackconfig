@@ -14,7 +14,7 @@ import Routers from '../../router/routers';
 
 class MyLayout extends Component{
   render(): Object{
-    return(
+    return (
       <Layout className={ style.layout }>
         <Layout.Header className={ style.header }>
           <Header />

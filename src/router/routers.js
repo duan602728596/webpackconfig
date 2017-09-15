@@ -11,7 +11,7 @@ import Form from '../modules/Form/Layout';
  */
 class Router extends Component{
   render(): Object{
-    return(
+    return (
       <Switch>
         <Route path="/" component={ Home } exact />
         <Route path="/Home" component={ Home } />

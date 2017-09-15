@@ -52,7 +52,7 @@ class ListDisplay extends Component{
   // 显示list
   listDisplay(){
     return this.props.listDisplay.map((item: string, index: number): Object=>{
-      return(
+      return (
         <li key={ index }>
           <Link to="/" title={ item }>{ item }</Link>
         </li>
@@ -69,7 +69,7 @@ class ListDisplay extends Component{
     });
   }
   render(): Object{
-    return(
+    return (
       <Card title="数据列表展示" extra={
         <Link className={ style.more } to="/" title="更多">更多</Link>
       }>

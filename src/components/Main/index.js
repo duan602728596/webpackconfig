@@ -10,7 +10,7 @@ import style from './style.sass';
 
 class Main extends Component{
   render(): Object{
-    return(
+    return (
       <Layout className={ style.main }>
         { this.props.children }
       </Layout>

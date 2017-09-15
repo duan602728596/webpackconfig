@@ -12,7 +12,7 @@ import ErrorBoundary from '../ErrorBoundary/index';
 
 class Content extends Component{
   render(): Object{
-    return(
+    return (
       <ErrorBoundary>
         <Layout.Content className={ style.content }>
           { this.props.children }

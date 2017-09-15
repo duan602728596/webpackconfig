@@ -40,7 +40,7 @@ const option: Object = {
 
 class Chart1 extends Component{
   render(): Object{
-    return(
+    return (
       <Card title="柱状图">
         <div>
           <ReactEchart option={ option } />

@@ -8,7 +8,7 @@ import Chart2 from './chart2';
 
 class Index extends Component{
   render(): Object{
-    return(
+    return (
       <div>
         <Row type="flex" gutter={ 10 }>
           {/* 左侧显示列表 */}

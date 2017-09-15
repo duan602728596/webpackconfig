@@ -30,7 +30,7 @@ const options: {
 
 class ModuleLayout extends Component{
   render(): Object{
-    return(
+    return (
       <Main>
         <Title>表单展示</Title>
         <Sider options={ options } />

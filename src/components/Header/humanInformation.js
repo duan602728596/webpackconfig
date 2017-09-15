@@ -8,7 +8,7 @@ import icon from '../Icon/style.sass';
 
 class HumanInformation extends Component{
   render(): Object{
-    return(
+    return (
       <div className={ style.humanInformation }>
         <i className={ icon.userTie + ' ' + style.human } />
         <span className={ style.username }>用户名</span>

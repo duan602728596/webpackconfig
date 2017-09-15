@@ -39,7 +39,7 @@ class Index extends Component{
     ];
   }
   render(): Object{
-    return(
+    return (
       <div>
         <Table dataSource={ dataSource() }
                rowKey={ (item: Object): string=>item.id }
