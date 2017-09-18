@@ -23,7 +23,7 @@ module.exports = config({
     ]
   },
   output: {
-    path: path.join(__dirname, '../build/script'),
+    path: path.join(__dirname, '../build'),
     filename: 'script/[name].js',
     chunkFilename: 'script/[name]_chunk.js',
     publicPath: '/'
