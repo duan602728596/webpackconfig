@@ -32,7 +32,7 @@ module.exports = {
           },
           debug: debug,
           modules: false, // 使用webpack的模块方法
-          useBuiltIns: true,
+          useBuiltIns: 'entry',
           uglify: false
         }
       ],
@@ -40,7 +40,7 @@ module.exports = {
       'react'
     ],
     plugins: [
-      'transform-decorators-legacy',    // 装饰器
+      'transform-decorators',           // 装饰器
       'transform-object-rest-spread',   // 对象的扩展
       [
         'import',
