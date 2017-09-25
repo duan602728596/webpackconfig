@@ -25,14 +25,14 @@ module.exports = {
         'env',
         {
           targets: {      // 兼容列表：https://cloud.githubusercontent.com/assets/588473/19214029/58deebce-8d48-11e6-9004-ee3fbcb75d8b.png
-            ie: 11,       // 兼容Ie：     v11
+            // ie: 11,    // 兼容Ie：     v11(!bug)
             edge: 12,     // 兼容Edge：   v12
             chrome: 40,   // 兼容Chrome： v40
             firefox: 40   // 兼容Firefox：v40
           },
           debug: debug,
-          modules: false, // 使用webpack的模块方法
-          useBuiltIns: 'entry',
+          modules: false,
+          useBuiltIns: 'usage',
           uglify: false
         }
       ],
@@ -40,8 +40,8 @@ module.exports = {
       'react'
     ],
     plugins: [
-      'transform-decorators',           // 装饰器
-      'transform-object-rest-spread',   // 对象的扩展
+      'transform-decorators',
+      'transform-object-rest-spread',
       [
         'import',
         {
