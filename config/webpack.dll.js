@@ -41,7 +41,7 @@ module.exports = {
           {
             loader: 'happypack/loader',
             options: {
-              id: 'es6_loader'
+              id: 'babel_loader'
             }
           }
         ]
@@ -75,7 +75,7 @@ module.exports = {
     /* HappyPack */
     // js
     new HappyPack({
-      id: 'es6_loader',
+      id: 'babel_loader',
       loaders: [
         {
           path: 'babel-loader',

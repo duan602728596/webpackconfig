@@ -85,7 +85,7 @@ module.exports = config({
     }),
     // react
     new HappyPack({
-      id: 'es6_loader',
+      id: 'babel_loader',
       loaders: ['react-hot-loader/webpack', babelConfig],
       threadPool: happyThreadPool,
       verbose: true

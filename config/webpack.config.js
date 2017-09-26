@@ -13,7 +13,7 @@ function config(options){
             {
               loader: 'happypack/loader',
               options: {
-                id: 'es6_loader'
+                id: 'babel_loader'
               }
             }
           ],
