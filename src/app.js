@@ -1,4 +1,5 @@
 // @flow
+import 'core-js/es6/promise';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, withRouter } from 'react-router-dom';
