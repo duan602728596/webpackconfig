@@ -21,43 +21,41 @@ class Forms extends Component{
   render(): Object{
     const { getFieldDecorator }: { getFieldDecorator: Function } = this.props.form;  // 包装表单控件
     return (
-      <div>
-        <Form onSubmit={ this.onHandleSubmit.bind(this) } layout="horizontal">
-          <Form.Item className={ style.formGroup } label="姓名">
-            {
-              getFieldDecorator('name', {
-                rules: [
-                  {
-                    message: '请输入姓名',
-                    required: true,
-                    whitespace: true
-                  }
-                ]
-              })(
-                <Input />
-              )
-            }
-          </Form.Item>
-          <Form.Item className={ style.formGroup } label="姓别">
-            {
-              getFieldDecorator('sex', {
-                initialValue: 'man'
-              })(
-                <Radio.Group>
-                  <Radio value="man">男</Radio>
-                  <Radio value="woman">女</Radio>
-                </Radio.Group>
-              )
-            }
-          </Form.Item>
-          <Form.Item className={ style.formGroup }>
-            <Button type="primary" htmlType="submit">
-              <Icon type="check-circle-o" />
-              <span>提交</span>
-            </Button>
-          </Form.Item>
-        </Form>
-      </div>
+      <Form onSubmit={ this.onHandleSubmit.bind(this) } layout="horizontal">
+        <Form.Item className={ style.formGroup } label="姓名">
+          {
+            getFieldDecorator('name', {
+              rules: [
+                {
+                  message: '请输入姓名',
+                  required: true,
+                  whitespace: true
+                }
+              ]
+            })(
+              <Input />
+            )
+          }
+        </Form.Item>
+        <Form.Item className={ style.formGroup } label="姓别">
+          {
+            getFieldDecorator('sex', {
+              initialValue: 'man'
+            })(
+              <Radio.Group>
+                <Radio value="man">男</Radio>
+                <Radio value="woman">女</Radio>
+              </Radio.Group>
+            )
+          }
+        </Form.Item>
+        <Form.Item className={ style.formGroup }>
+          <Button type="primary" htmlType="submit">
+            <Icon type="check-circle-o" />
+            <span>提交</span>
+          </Button>
+        </Form.Item>
+      </Form>
     );
   }
 }

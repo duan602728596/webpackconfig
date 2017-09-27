@@ -68,15 +68,13 @@ class Header extends Component{
   render(): Object{
     return (
       <ErrorBoundary>
-        <div>
-          <img className={ style.logo } src={ require('./logo.png') } alt="管理平台 demo" title="管理平台 demo" />
-          <nav className={ style.nav }>
-            <ul className={ commonStyle.clearfix }>
-              { this.navList(navOptions) }
-            </ul>
-          </nav>
-          <HumanInformation />
-        </div>
+        <img className={ style.logo } src={ require('./logo.png') } alt="管理平台 demo" title="管理平台 demo" />
+        <nav className={ style.nav }>
+          <ul className={ commonStyle.clearfix }>
+            { this.navList(navOptions) }
+          </ul>
+        </nav>
+        <HumanInformation />
       </ErrorBoundary>
     );
   }
