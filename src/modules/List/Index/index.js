@@ -40,7 +40,7 @@ class Index extends Component{
   }
   render(): Array{
     return [
-      <Table key="A"
+      <Table key={ A }
              dataSource={ dataSource() }
              rowKey={ (item: Object): string=>item.id }
              columns={ this.columns() }
