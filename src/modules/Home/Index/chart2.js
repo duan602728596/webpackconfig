@@ -66,9 +66,7 @@ class Chart1 extends Component{
   render(): Object{
     return (
       <Card title="折线图">
-        <div>
-          <ReactEchart option={ option } />
-        </div>
+        <ReactEchart option={ option } />
       </Card>
     );
   }

@@ -38,20 +38,19 @@ class Index extends Component{
       }
     ];
   }
-  render(): Object{
-    return (
-      <div>
-        <Table dataSource={ dataSource() }
-               rowKey={ (item: Object): string=>item.id }
-               columns={ this.columns() }
-               pagination={{
-                 defaultPageSize: 20,
-                 showSizeChanger: true,
-                 showQuickJumper: true
-               }}
-               bordered={ true } />
-      </div>
-    );
+  render(): Array{
+    return [
+      <Table key="A"
+             dataSource={ dataSource() }
+             rowKey={ (item: Object): string=>item.id }
+             columns={ this.columns() }
+             pagination={{
+               defaultPageSize: 20,
+               showSizeChanger: true,
+               showQuickJumper: true
+             }}
+             bordered={ true } />
+    ];
   }
 }
 
