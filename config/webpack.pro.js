@@ -22,7 +22,8 @@ module.exports = config({
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'script/[name]_[chunkhash].js',
-    chunkFilename: 'script/[name]_[chunkhash]_chunk.js'
+    chunkFilename: 'script/[name]_[chunkhash]_chunk.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -112,10 +113,7 @@ module.exports = config({
       template: path.join(__dirname, '../src/index.pug'),
       minify: {
         minifyCSS: true,
-        minifyJS: true,
-        minifyURLs: (text)=>{
-          return '/' + text;
-        }
+        minifyJS: true
       }
     })
   ]

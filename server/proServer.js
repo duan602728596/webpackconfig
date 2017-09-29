@@ -39,6 +39,7 @@ router.get(/^\/[^\.]*$/, async (ctx, next)=>{
 /* 静态文件 */
 router.get(/^.*\.[^\.]+$/, async (ctx, next)=>{
   const pathFile = ctx.path;
+  console.log(serverFile + pathFile);
   const [state, text] = await readFile(serverFile + pathFile);
 
   ctx.state = state;
