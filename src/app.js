@@ -25,8 +25,8 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>
-  , document.getElementById('react-app')
+  </Provider>,
+  document.getElementById('react-app')
 );
 
 /* 热替换 */

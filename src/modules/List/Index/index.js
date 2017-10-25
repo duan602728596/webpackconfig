@@ -41,15 +41,16 @@ class Index extends Component{
   render(): Array{
     return [
       <Table key={ 0 }
-             dataSource={ dataSource() }
-             rowKey={ (item: Object): string=>item.id }
-             columns={ this.columns() }
-             pagination={{
-               defaultPageSize: 20,
-               showSizeChanger: true,
-               showQuickJumper: true
-             }}
-             bordered={ true } />
+        dataSource={ dataSource() }
+        rowKey={ (item: Object): string=>item.id }
+        columns={ this.columns() }
+        pagination={{
+          defaultPageSize: 20,
+          showSizeChanger: true,
+          showQuickJumper: true
+        }}
+        bordered={ true }
+      />
     ];
   }
 }
