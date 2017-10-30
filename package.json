@@ -19,7 +19,7 @@
     "mime-types": "^2.1.17"
   },
   "devDependencies": {
-    "antd": "^2.13.7",
+    "antd": "^2.13.8",
     "babel-core": "^7.0.0-beta.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-import": "^1.6.2",
@@ -32,7 +32,7 @@
     "babel-preset-react": "^7.0.0-beta.3",
     "bundle-loader": "^0.5.5",
     "core-js": "^2.5.1",
-    "cross-env": "^5.1.0",
+    "cross-env": "^5.1.1",
     "css-loader": "^0.28.7",
     "echarts": "^3.7.2",
     "echarts-for-react": "^2.0.0",
