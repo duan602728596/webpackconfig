@@ -7,7 +7,7 @@ import Form from '../modules/Form/Layout';
 
 /**
  * 路由模块
- * 此处全部使用同步加载的方式，防止Menu组件报错
+ * 此处全部使用同步加载的方式
  */
 class Router extends Component{
   render(): Object{
