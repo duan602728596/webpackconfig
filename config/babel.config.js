@@ -22,7 +22,7 @@ module.exports = {
     cacheDirectory: true,
     presets: [
       [
-        'env',
+        '@babel/env',
         {
           targets: {
             ie: 11,
@@ -36,12 +36,12 @@ module.exports = {
           uglify: false
         }
       ],
-      'flow',
-      'react'
+      '@babel/flow',
+      '@babel/react'
     ],
     plugins: [
-      'transform-decorators',
-      'transform-object-rest-spread',
+      '@babel/proposal-decorators',
+      '@babel/proposal-object-rest-spread',
       [
         'import',
         {
