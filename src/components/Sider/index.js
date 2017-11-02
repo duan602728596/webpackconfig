@@ -1,4 +1,3 @@
-// @flow
 /**
  * layout - Sider
  * 页面左侧菜单

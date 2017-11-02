@@ -1,4 +1,3 @@
-// @flow
 /**
  * layout - main
  * 页面中部内容布局

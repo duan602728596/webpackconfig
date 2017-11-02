@@ -1,4 +1,3 @@
-// @flow
 /**
  * layout - Content
  * 页面内容

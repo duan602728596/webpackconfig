@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import { Form, Input, Radio, Button, Icon } from 'antd';
 import style from './style.sass';

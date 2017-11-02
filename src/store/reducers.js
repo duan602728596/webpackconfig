@@ -1,4 +1,3 @@
-// @flow
 import { combineReducers } from 'redux-immutable';
 import homeReducer from '../modules/Home/store/reducer';
 

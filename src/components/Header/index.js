@@ -1,4 +1,3 @@
-// @flow
 /**
  * layout - header
  * 顶部header布局
