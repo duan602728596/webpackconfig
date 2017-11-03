@@ -17,7 +17,7 @@ const serverFile = path.join(__dirname, '/../../build'); // 文件夹地址
 router.get(/^\/[^\.]*$/, async (ctx, next)=>{
   const { status, body } = await readFile(serverFile + '/index.html');
 
-  ctx.state = status;
+  ctx.status = status;
   ctx.type = 'text/html';
   ctx.body = body;
 
@@ -29,7 +29,7 @@ router.get(/^.*\.[^\.]+$/, async (ctx, next)=>{
   const pathFile = ctx.path;
   const { status, body } = await readFile(serverFile + pathFile);
 
-  ctx.state = status;
+  ctx.status = status;
   ctx.type = status === 200 ? mime.lookup(pathFile) : 'text/plain';
   ctx.body = body;
 

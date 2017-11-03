@@ -7,7 +7,7 @@ function readFile(file){
       if(err){
         resolve({
           status: 404,
-          body: err
+          body: '404 not found.'
         });
       }else{
         resolve({
