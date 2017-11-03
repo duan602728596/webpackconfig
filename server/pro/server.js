@@ -1,5 +1,4 @@
 /* 生产环境 服务器 */
-const fs = require('fs');
 const path = require('path');
 const Koa = require('koa');
 const Router = require('koa-router');
@@ -7,31 +6,20 @@ const logger = require('koa-logger');
 const convert = require('koa-convert');
 const staticCache = require('koa-static-cache');
 const mime = require('mime-types');
+const readFile = require('./readFile');
 
 const app = new Koa();
 const router = new Router();
-const port = 5051;                                    // 配置端口
-const serverFile = path.join(__dirname, '/../build'); // 文件夹地址
-
-function readFile(file){
-  return new Promise((resolve, reject)=>{
-    fs.readFile(file, (err, data)=>{
-      if(err){
-        resolve([404, err]);
-      }else{
-        resolve([200, data]);
-      }
-    });
-  });
-}
+const port = 5051;                                       // 配置端口
+const serverFile = path.join(__dirname, '/../../build'); // 文件夹地址
 
 /* index路由 */
 router.get(/^\/[^\.]*$/, async (ctx, next)=>{
-  const [state, text] = await readFile(serverFile + '/index.html');
+  const { status, body } = await readFile(serverFile + '/index.html');
 
-  ctx.state = state;
+  ctx.state = status;
   ctx.type = 'text/html';
-  ctx.body = text;
+  ctx.body = body;
 
   await next();
 });
@@ -39,11 +27,11 @@ router.get(/^\/[^\.]*$/, async (ctx, next)=>{
 /* 静态文件 */
 router.get(/^.*\.[^\.]+$/, async (ctx, next)=>{
   const pathFile = ctx.path;
-  const [state, text] = await readFile(serverFile + pathFile);
+  const { status, body } = await readFile(serverFile + pathFile);
 
-  ctx.state = state;
-  ctx.type = state === 200 ? mime.lookup(pathFile) : 'text/plain';
-  ctx.body = text;
+  ctx.state = status;
+  ctx.type = status === 200 ? mime.lookup(pathFile) : 'text/plain';
+  ctx.body = body;
 
   await next();
 });
