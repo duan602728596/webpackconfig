@@ -6,7 +6,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './style.sass';
-import commonStyle from '../../common.sass';
 import icon from '../Icon/style.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
 import HumanInformation from './HumanInformation';
@@ -23,19 +22,19 @@ export const navOptions: options[] = [
     id: 'home',
     name: '主页',
     href: '/Home',
-    icon: icon.home
+    icon: 'home'
   },
   {
     id: 'list',
     name: '列表',
     href: '/List',
-    icon: icon.cog
+    icon: 'cog'
   },
   {
     id: 'form',
     name: '表单',
     href: '/Form',
-    icon: icon.users
+    icon: 'users'
   }
 ];
 
@@ -43,7 +42,7 @@ const len: boolean = navOptions.length > 0;
 
 class Header extends Component{
   // 判断首页home
-  oddEvent(item: options, match: Object, location: Object): boolean {
+  oddEvent(item: options, match: Object, location: Object): boolean{
     const { pathname }: { pathname: string } = location;
     const { href }: { pathname: string } = item;
     const reg: RegExp = new RegExp(`^${ href }.*$`, 'ig');
@@ -57,7 +56,7 @@ class Header extends Component{
       return(
         <li key={ item.id }>
           <NavLink to={ item.href } activeClassName={ style.navActive } isActive={ this.oddEvent.bind(this, item) }>
-            <i className={ item.icon } />
+            <i className={ icon[item.icon] } />
             <span>{ item.name }</span>
           </NavLink>
         </li>
@@ -69,7 +68,7 @@ class Header extends Component{
       <ErrorBoundary>
         <img className={ style.logo } src={ require('./logo.png') } alt="管理平台 demo" title="管理平台 demo" />
         <nav className={ style.nav }>
-          <ul className={ commonStyle.clearfix }>
+          <ul className="clearfix">
             { this.navList(navOptions) }
           </ul>
         </nav>

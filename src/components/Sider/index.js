@@ -5,9 +5,8 @@
  */
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu } from 'antd';
 import style from './style.sass';
-import commonStyle from '../../common.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
 
 @withRouter
@@ -47,7 +46,7 @@ class Sider extends Component{
         // 当有children时，返回Menu.SubMenu，里面包裹Menu.Item
         return (
           <Menu.SubMenu key={ item.id } title={
-            <span className={ commonStyle.clearfix }>
+            <span className="clearfix">
               { this.hasIcon(item) }
               <span>{ item.name }</span>
             </span>
