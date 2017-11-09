@@ -49,10 +49,7 @@ class Forms extends Component{
           }
         </Form.Item>
         <Form.Item className={ style.formGroup }>
-          <Button type="primary" htmlType="submit">
-            <Icon type="check-circle-o" />
-            <span>提交</span>
-          </Button>
+          <Button type="primary" htmlType="submit" icon="check-circle-o">提交</Button>
         </Form.Item>
       </Form>
     );
