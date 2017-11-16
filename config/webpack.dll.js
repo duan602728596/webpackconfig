@@ -23,7 +23,8 @@ module.exports = {
       'redux-actions',
       'immutable',
       'redux-immutable',
-      'reselect'
+      'reselect',
+      'rc-queue-anim'
     ]
   },
   output: {
