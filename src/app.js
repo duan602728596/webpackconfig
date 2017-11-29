@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import './common.sass';
-import Layout from './components/Layout';
+import Layout from './assembly/Layout';
 
 /* app */
 ReactDOM.render(
