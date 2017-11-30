@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Main from '../../components/Main/index';
-import Content from '../../components/Content/index';
-import Title from '../../components/Title/index';
+import Main from '../../assembly/Main/index';
+import Content from '../../assembly/Content/index';
+import Title from '../../assembly/Title/index';
 import Index from './Index/index';
 
 class ModuleLayout extends Component{

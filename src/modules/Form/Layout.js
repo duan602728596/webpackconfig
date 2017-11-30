@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Main from '../../components/Main/index';
-import Sider from '../../components/Sider/index';
-import Content from '../../components/Content/index';
-import Title from '../../components/Title/index';
+import Main from '../../assembly/Main/index';
+import Sider from '../../assembly/Sider/index';
+import Content from '../../assembly/Content/index';
+import Title from '../../assembly/Title/index';
 import asyncModule from '../../router/asyncModule';
 import Index from 'bundle-loader?lazy&name=form!./Index/index';
 

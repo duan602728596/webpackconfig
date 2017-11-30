@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Icon } from 'antd';
-import Main from '../../components/Main/index';
-import Sider from '../../components/Sider/index';
-import Content from '../../components/Content/index';
-import Title from '../../components/Title/index';
+import Main from '../../assembly/Main/index';
+import Sider from '../../assembly/Sider/index';
+import Content from '../../assembly/Content/index';
+import Title from '../../assembly/Title/index';
 import asyncModule from '../../router/asyncModule';
-import icon from '../../components/Icon/style.sass';
+import icon from '../../assembly/Icon/style.sass';
 import Index from 'bundle-loader?lazy&name=list!./Index/index';
 import reducer from 'bundle-loader?lazy&name=list!./store/reducer';
 
