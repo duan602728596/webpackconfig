@@ -28,7 +28,7 @@
     "@babel/preset-env": "^7.0.0-beta.33",
     "@babel/preset-flow": "^7.0.0-beta.33",
     "@babel/preset-react": "^7.0.0-beta.33",
-    "antd": "^2.13.10",
+    "antd": "^3.0.0-rc.4",
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-import": "^1.6.2",
     "babel-preset-es2015": "^7.0.0-beta.3",
