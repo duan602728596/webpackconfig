@@ -4,7 +4,7 @@ import style from './style.sass';
 
 @Form.create()
 class Forms extends Component{
-  onHandleSubmit(event: Object): void{
+  onHandleSubmit(event: Event): void{
     event.preventDefault();
     const { validateFields, getFieldsValue }: {
       validateFields: Function,
