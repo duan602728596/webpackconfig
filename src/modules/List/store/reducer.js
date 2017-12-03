@@ -11,8 +11,8 @@ const initData: {
 
 /* reducer */
 const reducer: Function = handleActions({
-  [combineActions(...objectToArray(module1Action))]: (state: Object, action: Object): Object=>{
-    return state.set('module1', module1Reducer(state.get('module1'), action));
+  [combineActions(...objectToArray(module1Action))]: ($$state: Immutable.Map, action: Object): Immutable.Map=>{
+    return $$state.set('module1', module1Reducer($$state.get('module1'), action));
   }
 }, fromJS(initData));
 

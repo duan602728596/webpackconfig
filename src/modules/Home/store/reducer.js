@@ -12,8 +12,8 @@ export const listDisplayChange: Function = createAction('首页列表展示');
 
 /* reducer */
 const reducer: Function = handleActions({
-  [listDisplayChange]: (state: Object, action: Object): Object=>{
-    return state.set('listDisplay', action.payload.listDisplay);
+  [listDisplayChange]: ($$state: Immutable.Map, action: Object): Immutable.Map=>{
+    return $$state.set('listDisplay', action.payload.listDisplay);
   }
 }, fromJS(initData));
 
