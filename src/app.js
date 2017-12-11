@@ -1,4 +1,3 @@
-import 'core-js/es6/promise';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
