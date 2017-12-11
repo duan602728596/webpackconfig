@@ -51,7 +51,7 @@ class Header extends Component{
     }
     return match && reg.test(pathname);
   }
-  navList(options: options[]): Object{
+  navList(options: options[]): Array{
     return options.map((item: options, index: number): Object=>{
       return(
         <li key={ item.id }>
