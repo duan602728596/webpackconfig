@@ -53,7 +53,7 @@ class Header extends Component{
   }
   navList(options: options[]): Array{
     return options.map((item: options, index: number): Object=>{
-      return(
+      return (
         <li key={ item.id }>
           <NavLink to={ item.href } activeClassName={ style.navActive } isActive={ this.oddEvent.bind(this, item) }>
             <i className={ icon[item.icon] } />
