@@ -8,10 +8,6 @@ const compiler = webpack(devConfig);
 /* webpack中间件 */
 function devMiddle(){
   return devMiddleware(compiler, {
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: true
-    },
     reload: true,
     publicPath: devConfig.output.publicPath,
     stats: {
