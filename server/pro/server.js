@@ -1,9 +1,11 @@
 /* 生产环境 服务器 */
 const path = require('path');
+const zlib = require('zlib');
 const Koa = require('koa');
 const Router = require('koa-router');
 const logger = require('koa-logger');
 const convert = require('koa-convert');
+const compress = require('koa-compress');
 const staticCache = require('koa-static-cache');
 const mime = require('mime-types');
 const readFile = require('./readFile');
@@ -35,6 +37,15 @@ router.get(/^.*\.[^\.]+$/, async (ctx, next)=>{
 
   await next();
 });
+
+/* gzip压缩 */
+app.use(compress({
+  filter: function(content_type){
+    return true;
+  },
+  threshold: 2048,
+  flush: zlib.constants.Z_SYNC_FLUSH
+}));
 
 /* 日志 */
 app.use(logger());
