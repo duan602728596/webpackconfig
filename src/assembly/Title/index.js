@@ -10,8 +10,8 @@ class Title extends Component{
     // 组件挂载时添加标题
     document.title = 'children' in this.props ? this.props.children : defaultTitle;
   }
-  render(): boolean{
-    return false;
+  render(): null{
+    return null;
   }
 }
 

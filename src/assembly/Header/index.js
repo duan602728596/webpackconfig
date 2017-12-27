@@ -22,19 +22,19 @@ export const navOptions: options[] = [
     id: 'home',
     name: '主页',
     href: '/Home',
-    icon: 'home'
+    icon: icon['home']
   },
   {
     id: 'list',
     name: '列表',
     href: '/List',
-    icon: 'cog'
+    icon: icon['cog']
   },
   {
     id: 'form',
     name: '表单',
     href: '/Form',
-    icon: 'users'
+    icon: icon['users']
   }
 ];
 
@@ -56,7 +56,7 @@ class Header extends Component{
       return (
         <li key={ item.id }>
           <NavLink to={ item.href } activeClassName={ style.navActive } isActive={ this.oddEvent.bind(this, item) }>
-            <i className={ icon[item.icon] } />
+            <i className={ item.icon } />
             <span>{ item.name }</span>
           </NavLink>
         </li>

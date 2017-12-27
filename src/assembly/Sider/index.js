@@ -32,11 +32,11 @@ class Sider extends Component{
     return key;
   }
   // 判断图标的显示
-  hasIcon(item: Object): boolean | Object{
+  hasIcon(item: Object): ?Object{
     if('icon' in item){
-      return typeof item.icon === 'string' ? (<i className={ style.icon + ' ' + item.icon } />) : item.icon;
+      return typeof item.icon === 'string' ? <i className={ style.icon + ' ' + item.icon } /> : item.icon;
     }else{
-      return false;
+      return null;
     }
   }
   // 渲染菜单
