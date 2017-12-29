@@ -12,8 +12,8 @@ class ErrorBoundary extends Component{
     error: ?any,
     info: ?any
   };
-  constructor(props: Object): void{
-    super(props);
+  constructor(): void{
+    super(...arguments);
     this.state = {
       hasError: false,
       error: null,
