@@ -36,12 +36,13 @@ module.exports = {
           uglify: false
         }
       ],
-      '@babel/flow',
-      '@babel/react'
+      '@babel/preset-flow',
+      '@babel/preset-react'
     ],
     plugins: [
-      '@babel/proposal-decorators',
-      '@babel/proposal-object-rest-spread',
+      '@babel/plugin-proposal-decorators',
+      '@babel/plugin-proposal-export-default-from',
+      '@babel/plugin-proposal-object-rest-spread',
       [
         'import',
         {

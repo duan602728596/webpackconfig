@@ -3,10 +3,9 @@ import { Route, Switch } from 'react-router-dom';
 import asyncModule from './asyncModule';
 import Home from '../modules/Home/Layout';
 import List from 'bundle-loader?lazy&name=list!../modules/List/Layout';
-import listReducer from 'bundle-loader?lazy&name=list!../modules/List/store/reducer';
 import Form from 'bundle-loader?lazy&name=form!../modules/Form/Layout';
 
-const ListBundle: Function = asyncModule(List, listReducer);
+const ListBundle: Function = asyncModule(List);
 const FormBundle: Function = asyncModule(Form);
 
 class Router extends Component{
