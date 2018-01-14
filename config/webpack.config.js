@@ -1,7 +1,13 @@
 /* webpack配置 */
+const os = require('os');
 const process = require('process');
 const webpack = require('webpack');
+const babelConfig = require('./babel.config');
 const manifest = require('../.dll/manifest.json');
+
+const happyThreadPool = HappyPack.ThreadPool({
+  size: os.cpus().length
+});
 
 function config(options){
   const conf = {
@@ -87,6 +93,14 @@ function config(options){
         'process.env': {
           NODE_ENV: JSON.stringify(process.env.NODE_ENV)
         }
+      }),
+      /* HappyPack */
+      // react
+      new HappyPack({
+        id: 'babel_loader',
+        loaders: [babelConfig],
+        threadPool: happyThreadPool,
+        verbose: true
       })
     ]
   };

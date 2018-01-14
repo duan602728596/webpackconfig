@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HappyPack = require('happypack');
 const config = require('./webpack.config');
-const babelConfig = require('./babel.config');
 const cssConfig = require('./css.config');
 const sassConfig = require('./sass.config');
 
@@ -80,13 +79,6 @@ module.exports = config({
     new HappyPack({
       id: 'css_loader',
       loaders: ['style-loader', 'css-loader'],
-      threadPool: happyThreadPool,
-      verbose: true
-    }),
-    // react
-    new HappyPack({
-      id: 'babel_loader',
-      loaders: ['react-hot-loader/webpack', babelConfig],
       threadPool: happyThreadPool,
       verbose: true
     }),

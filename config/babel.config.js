@@ -40,6 +40,7 @@ module.exports = {
       '@babel/preset-react'
     ],
     plugins: [
+      'react-hot-loader/babel',
       '@babel/plugin-proposal-decorators',
       '@babel/plugin-proposal-export-default-from',
       '@babel/plugin-proposal-object-rest-spread',
