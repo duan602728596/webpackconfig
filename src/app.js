@@ -6,7 +6,7 @@ import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import store from './store/store';
 import './common.sass';
-import Layout from './assembly/Layout';
+import Layout from './assembly/Layout/index';
 
 /* app */
 ReactDOM.render(

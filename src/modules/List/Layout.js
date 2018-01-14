@@ -5,10 +5,8 @@ import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
 import Content from '../../assembly/Content/index';
 import Title from '../../assembly/Title/index';
-import asyncModule from '../../router/asyncModule';
 import icon from '../../assembly/Icon/style.sass';
-import Index from 'bundle-loader?lazy&name=list!./Index/index';
-import reducer from 'bundle-loader?lazy&name=list!./store/reducer';
+import Index from './Index/index';
 
 /* 配置二、三级导航菜单 */
 const options: {
@@ -61,11 +59,11 @@ class ModuleLayout extends Component{
         <Sider options={ options } />
         <Content>
           <Switch>
-            <Route path="/List" component={ asyncModule(Index, reducer) } exact />
-            <Route path="/List/S1" component={ asyncModule(Index, reducer) } exact />
-            <Route path="/List/S2" component={ asyncModule(Index, reducer) } exact />
-            <Route path="/List/S3/C1" component={ asyncModule(Index, reducer) } exact />
-            <Route path="/List/S3/C2" component={ asyncModule(Index, reducer) } exact />
+            <Route path="/List" component={ Index } exact />
+            <Route path="/List/S1" component={ Index } exact />
+            <Route path="/List/S2" component={ Index } exact />
+            <Route path="/List/S3/C1" component={ Index } exact />
+            <Route path="/List/S3/C2" component={ Index } exact />
           </Switch>
         </Content>
       </Main>

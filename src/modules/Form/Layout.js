@@ -4,8 +4,7 @@ import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
 import Content from '../../assembly/Content/index';
 import Title from '../../assembly/Title/index';
-import asyncModule from '../../router/asyncModule';
-import Index from 'bundle-loader?lazy&name=form!./Index/index';
+import Index from './Index/index';
 
 /* 配置二、三级导航菜单 */
 const options: {
@@ -35,8 +34,8 @@ class ModuleLayout extends Component{
         <Sider options={ options } />
         <Content>
           <Switch>
-            <Route path="/Form" component={ asyncModule(Index) } exact />
-            <Route path="/Form/S1" component={ asyncModule(Index) } exact />
+            <Route path="/Form" component={ Index } exact />
+            <Route path="/Form/S1" component={ Index } exact />
           </Switch>
         </Content>
       </Main>
