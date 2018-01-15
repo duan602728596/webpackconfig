@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
@@ -17,7 +17,7 @@ class App extends Component{
         <LocaleProvider locale={ zhCN }>
           <BrowserRouter>
             <Switch>
-              <Route path="/Login" component={ (props: Object): Object=>(<div>登录</div>) } exact />
+              <Route path="/Login" component={ (props: Object): Object => <div>登录</div> } exact />
               <Route component={ Layout } exact />
             </Switch>
           </BrowserRouter>
