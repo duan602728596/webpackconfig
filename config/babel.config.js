@@ -22,7 +22,7 @@ module.exports = {
     cacheDirectory: true,
     presets: [
       [
-        '@babel/env',
+        '@babel/preset-env',
         {
           targets: {
             ie: 11,
