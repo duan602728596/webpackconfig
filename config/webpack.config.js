@@ -2,6 +2,7 @@
 const os = require('os');
 const process = require('process');
 const webpack = require('webpack');
+const HappyPack = require('happypack');
 const babelConfig = require('./babel.config');
 const manifest = require('../.dll/manifest.json');
 
