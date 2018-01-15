@@ -99,7 +99,7 @@ function config(options){
       // react
       new HappyPack({
         id: 'babel_loader',
-        loaders: [babelConfig],
+        loaders: ['react-hot-loader/babel', babelConfig],
         threadPool: happyThreadPool,
         verbose: true
       })
