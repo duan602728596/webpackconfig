@@ -7,3 +7,7 @@ ReactDOM.render(
   <App />,
   document.getElementById('react-app')
 );
+
+if(module.hot){
+  module.hot.accept();
+}
