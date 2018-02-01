@@ -34,8 +34,8 @@ class ModuleLayout extends Component{
         <Sider options={ options } />
         <Content>
           <Switch>
-            <Route path="/Form" component={ Index } exact />
-            <Route path="/Form/S1" component={ Index } exact />
+            <Route path="/Form" component={ Index } exact={ true } />
+            <Route path="/Form/S1" component={ Index } exact={ true } />
           </Switch>
         </Content>
       </Main>

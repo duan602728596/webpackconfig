@@ -69,7 +69,7 @@ class Sider extends Component{
   }
   render(): Object{
     const options: Array = this.props.options || [];
-    const sk = this.getSelectKey(options);
+    const sk: string[] = this.getSelectKey(options);
     return (
       <ErrorBoundary>
         <Layout.Sider className={ style.sider } width={ 180 }>

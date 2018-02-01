@@ -12,8 +12,8 @@ class ModuleLayout extends Component{
         <Title />
         <Content>
           <Switch>
-            <Route path="/" component={ Index } exact />
-            <Route path="/Home" component={ Index } exact />
+            <Route path="/" component={ Index } exact={ true } />
+            <Route path="/Home" component={ Index } exact={ true } />
           </Switch>
         </Content>
       </Main>

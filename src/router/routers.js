@@ -12,7 +12,7 @@ class Router extends Component{
   render(): Object{
     return (
       <Switch>
-        <Route path="/" component={ Home } exact />
+        <Route path="/" component={ Home } exact={ true } />
         <Route path="/Home" component={ Home } />
         <Route path="/List" component={ ListBundle } />
         <Route path="/Form" component={ FormBundle } />
