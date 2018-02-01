@@ -59,11 +59,11 @@ class ModuleLayout extends Component{
         <Sider options={ options } />
         <Content>
           <Switch>
-            <Route path="/List" component={ Index } exact />
-            <Route path="/List/S1" component={ Index } exact />
-            <Route path="/List/S2" component={ Index } exact />
-            <Route path="/List/S3/C1" component={ Index } exact />
-            <Route path="/List/S3/C2" component={ Index } exact />
+            <Route path="/List" component={ Index } exact={ true } />
+            <Route path="/List/S1" component={ Index } exact={ true } />
+            <Route path="/List/S2" component={ Index } exact={ true } />
+            <Route path="/List/S3/C1" component={ Index } exact={ true } />
+            <Route path="/List/S3/C2" component={ Index } exact={ true } />
           </Switch>
         </Content>
       </Main>
