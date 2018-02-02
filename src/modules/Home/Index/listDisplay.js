@@ -27,7 +27,7 @@ const dispatch: Function = (dispatch: Function): Object=>({
 });
 
 function simulationData(): Promise{
-  return new Promise((resolve: Function, reject: Function): any=>{
+  return new Promise((resolve: Function, reject: Function): void=>{
     const data: string[] = [];
     for(let i: number = 0, j: number = 18; i < j; i++){
       data.push(`这是一条测试数据 ${ i }`);
@@ -49,7 +49,7 @@ class ListDisplay extends Component{
     };
   }
   // 显示list
-  listDisplay(){
+  listDisplay(): Array{
     return this.props.listDisplay.map((item: string, index: number): Object=>{
       return (
         <li key={ index }>

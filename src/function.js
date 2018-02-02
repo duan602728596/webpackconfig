@@ -7,7 +7,7 @@
  */
 export function objectToArray(obj: Object): Function[]{
   const arr: Function[] = [];
-  for(const key in obj){
+  for(const key: string in obj){
     arr.push(obj[key]);
   }
   return arr;

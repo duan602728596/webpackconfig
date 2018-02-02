@@ -10,7 +10,7 @@ class Forms extends Component{
       validateFields: Function,
       getFieldsValue: Function
     } = this.props.form;
-    validateFields((err: ?string, value: any)=>{
+    validateFields((err: ?string, value: any): void=>{
       if(!err){
         console.log(getFieldsValue());
         alert('提交成功！');
