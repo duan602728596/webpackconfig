@@ -10,7 +10,7 @@ function output(env){
   }
 }
 
-// 根据当前环境配置debug
+// 根据当前环境配置css-in-js的name
 // development
 // production
 const env = process.env.NODE_ENV;
