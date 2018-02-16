@@ -14,7 +14,7 @@ function config(options){
       rules: [
         { // react & js
           test: /^.*\.js$/,
-          use:[babelConfig],
+          use: [babelConfig],
           exclude: /(dll\.js|node_modules)/
         },
         {
