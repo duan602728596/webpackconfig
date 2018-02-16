@@ -45,7 +45,6 @@
     "eslint-plugin-flowtype": "^2.44.0",
     "eslint-plugin-react": "^7.6.1",
     "file-loader": "^1.1.6",
-    "happypack": "^4.0.1",
     "html-webpack-plugin": "github:Graham42/html-webpack-plugin#feat/webpack-4",
     "immutable": "^4.0.0-rc.9",
     "koa-webpack-middleware": "^1.0.7",
