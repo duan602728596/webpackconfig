@@ -2,10 +2,10 @@
 const process = require('process');
 const webpack = require('webpack');
 const babelConfig = require('./babel.config');
-const manifest = require('../.dll/manifest.json');
 const cssConfig = require('./css.config');
 const sassConfig = require('./sass.config');
 const postcssConfig = require('./postcss.config');
+const manifest = require('../.dll/manifest.json');
 
 function config(options){
   const conf = {
