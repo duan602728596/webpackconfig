@@ -11,8 +11,6 @@ function output(env){
 }
 
 // 根据当前环境配置debug
-// development
-// production
 const env = process.env.NODE_ENV;
 const debug = output(env);
 
@@ -54,8 +52,8 @@ const plugins = [
 if(debug) plugins.unshift('react-hot-loader/babel');
 
 module.exports = {
-  path: 'babel-loader',
-  query: {
+  loader: 'babel-loader',
+  options: {
     cacheDirectory: true,
     presets,
     plugins

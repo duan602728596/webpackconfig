@@ -1,29 +1,20 @@
 /* webpack配置 */
-const os = require('os');
 const process = require('process');
 const webpack = require('webpack');
-const HappyPack = require('happypack');
 const babelConfig = require('./babel.config');
 const manifest = require('../.dll/manifest.json');
-
-const happyThreadPool = HappyPack.ThreadPool({
-  size: os.cpus().length
-});
+const cssConfig = require('./css.config');
+const sassConfig = require('./sass.config');
+const postcssConfig = require('./postcss.config');
 
 function config(options){
   const conf = {
+    mode: process.env.NODE_ENV,
     module: {
       rules: [
         { // react & js
           test: /^.*\.js$/,
-          use: [
-            {
-              loader: 'happypack/loader',
-              options: {
-                id: 'babel_loader'
-              }
-            }
-          ],
+          use:[babelConfig],
           exclude: /(dll\.js|node_modules)/
         },
         {
@@ -37,6 +28,14 @@ function config(options){
               }
             }
           ]
+        },
+        { // sass
+          test: /^.*\.sass$/,
+          use: ['style-loader', cssConfig, postcssConfig, sassConfig]
+        },
+        { // css
+          test: /^.*\.css$/,
+          use: ['style-loader', 'css-loader']
         },
         { // 图片
           test: /^.*\.(jpg|png|gif)$/,
@@ -73,36 +72,32 @@ function config(options){
               }
             }
           ]
+        },
+        { // pug
+          test: /^.*\.pug$/,
+          use: [
+            {
+              loader: 'pug-loader',
+              options: {
+                pretty: process.env.NODE_ENV === 'development',
+                name: '[name].html'
+              }
+            }
+          ]
         }
       ]
     },
     plugins: [
-      // 范围提升
-      new webpack.optimize.ModuleConcatenationPlugin(),
       // dll
       new webpack.DllReferencePlugin({
         context: __dirname,
         manifest: manifest
-      }),
-      new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-        }
-      }),
-      /* HappyPack */
-      // react
-      new HappyPack({
-        id: 'babel_loader',
-        loaders: [babelConfig],
-        threadPool: happyThreadPool,
-        verbose: true
       })
     ]
   };
 
   /* 合并 */
   conf.entry = options.entry;                                               // 合并入口文件
-  conf.module.rules = conf.module.rules.concat(options.module.rules);       // 合并rules
   conf.plugins = conf.plugins.concat(options.plugins);                      // 合并插件
   conf.output = options.output;                                             // 合并输出目录
   if('devtool' in options){                                                 // 合并source-map配置

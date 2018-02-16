@@ -1,16 +1,11 @@
 /* 预先编译dll */
 const path = require('path');
-const os = require('os');
 const process = require('process');
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const HappyPack = require('happypack');
-
-const happyThreadPool = HappyPack.ThreadPool({
-  size: os.cpus().length
-});
 
 module.exports = {
+  mode: process.env.NODE_ENV,
   entry: {
     dll: [
       'react',
@@ -39,9 +34,26 @@ module.exports = {
         test: /^.*\.js$/,
         use: [
           {
-            loader: 'happypack/loader',
+            loader: 'babel-loader',
             options: {
-              id: 'babel_loader'
+              cacheDirectory: true,
+              presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    targets: {
+                      ie: 11,
+                      edge: 12,
+                      chrome: 40,
+                      firefox: 40
+                    },
+                    debug: false,
+                    modules: false,
+                    useBuiltIns: false,
+                    uglify: false
+                  }
+                ]
+              ]
             }
           }
         ]
@@ -53,8 +65,7 @@ module.exports = {
     new webpack.DllPlugin({
       path: '.dll/manifest.json',
       name: '[name]_[hash]',
-      context: __dirname,
-      sourceType: 'var'
+      context: __dirname
     }),
     // 代码压缩
     new UglifyJSPlugin({
@@ -66,43 +77,6 @@ module.exports = {
           quote_style: 3
         }
       }
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-      }
-    }),
-    /* HappyPack */
-    // js
-    new HappyPack({
-      id: 'babel_loader',
-      loaders: [
-        {
-          path: 'babel-loader',
-          query: {
-            cacheDirectory: true,
-            presets: [
-              [
-                '@babel/preset-env',
-                {
-                  targets: {
-                    ie: 11,
-                    edge: 12,
-                    chrome: 40,
-                    firefox: 40
-                  },
-                  debug: false,
-                  modules: false,
-                  useBuiltIns: false,
-                  uglify: false
-                }
-              ]
-            ]
-          }
-        }
-      ],
-      threadPool: happyThreadPool,
-      verbose: true
     })
   ]
 };
