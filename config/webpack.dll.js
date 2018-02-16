@@ -25,7 +25,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../.dll'),
     filename: '[name].js',
-    library: '[name]_[hash]'
+    library: '[name]_[hash]',
+    libraryTarget: 'var'
   },
   module: {
     rules: [
