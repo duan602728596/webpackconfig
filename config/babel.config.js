@@ -1,4 +1,5 @@
 /* babel-loader 配置 */
+const path = require('path');
 const process = require('process');
 
 function output(env){
@@ -54,7 +55,7 @@ if(debug) plugins.unshift('react-hot-loader/babel');
 module.exports = {
   loader: 'babel-loader',
   options: {
-    cacheDirectory: true,
+    cacheDirectory: path.join(__dirname, '../.babelCache'),
     presets,
     plugins
   }
