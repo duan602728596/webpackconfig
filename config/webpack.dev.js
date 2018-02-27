@@ -22,7 +22,6 @@ module.exports = config({
   devtool: 'cheap-module-source-map',
   plugins: [
     // WebpackHotMiddleware
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     // html模板
     new HtmlWebpackPlugin({
