@@ -36,7 +36,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true,
+              cacheDirectory: path.join(__dirname, '../.babelCache'),
               presets: [
                 [
                   '@babel/preset-env',
