@@ -3,11 +3,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('./webpack.config');
+const cssConfig = require('./css.config');
+const sassConfig = require('./sass.config');
+const postcssConfig = require('./postcss.config');
 
 /* 合并配置 */
 module.exports = config({
   entry: {
-    // 热部署模块
     app: [
       'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=500&reload=true',
       path.join(__dirname, '../src/app.js')
@@ -20,8 +22,20 @@ module.exports = config({
     publicPath: '/'
   },
   devtool: 'cheap-module-source-map',
+  module: {
+    rules: [
+      { // sass
+        test: /^.*\.sass$/,
+        use: ['style-loader', cssConfig, postcssConfig, sassConfig],
+      },
+      { // css
+        test: /^.*\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   plugins: [
-    // WebpackHotMiddleware
+    // 热更新
     new webpack.HotModuleReplacementPlugin(),
     // html模板
     new HtmlWebpackPlugin({
