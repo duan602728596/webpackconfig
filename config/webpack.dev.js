@@ -23,7 +23,16 @@ module.exports = config({
   },
   devtool: 'cheap-module-source-map',
   module: {
-    rules: []
+    rules: [
+      { // sass
+        test: /^.*\.sass$/,
+        use: ['style-loader', cssConfig, postcssConfig, sassConfig]
+      },
+      { // css
+        test: /^.*\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
   plugins: [
     // 热更新
