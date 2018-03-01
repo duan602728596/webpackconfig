@@ -13,12 +13,12 @@ const options: {
   id: string,
   name: string,
   url: string,
-  icon: ?(string | Object),   // 传入一个字符串或节点
+  icon: ?(string | Element),   // 传入一个字符串或节点
   children: ?{
     id: string,
     name: string,
     url: string,
-    icon: ?(string | Object)  // 传入一个字符串或节点
+    icon: ?(string | Element)  // 传入一个字符串或节点
   }[]
 }[] = [
   {
