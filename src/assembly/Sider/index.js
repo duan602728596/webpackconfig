@@ -32,7 +32,7 @@ class Sider extends Component{
     return key;
   }
   // 判断图标的显示
-  hasIcon(item: Object): ?Object{
+  hasIcon(item: Object): ?Element{
     if('icon' in item){
       return typeof item.icon === 'string' ? <i className={ style.icon + ' ' + item.icon } /> : item.icon;
     }else{
