@@ -16,7 +16,7 @@ const port = 5051;                                       // 配置端口
 const serverFile = path.join(__dirname, '/../../build'); // 文件夹地址
 
 /* index路由 */
-router.get(/^\/[^\.]*$/, async (ctx, next)=>{
+router.get(/^\/[^\.]*$/, async(ctx, next)=>{
   const { status, body } = await readFile(serverFile + '/index.html');
 
   ctx.status = status;
@@ -27,7 +27,7 @@ router.get(/^\/[^\.]*$/, async (ctx, next)=>{
 });
 
 /* 静态文件 */
-router.get(/^.*\.[^\.]+$/, async (ctx, next)=>{
+router.get(/^.*\.[^\.]+$/, async(ctx, next)=>{
   const pathFile = ctx.path;
   const { status, body } = await readFile(serverFile + pathFile);
 

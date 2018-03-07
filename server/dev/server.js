@@ -8,7 +8,7 @@ const app = new Koa();
 const port = 5050; // 配置端口
 
 /* 重定向 */
-app.use(async (ctx, next)=>{
+app.use(async(ctx, next)=>{
   const file = ctx.path;
   const mimeType = mime.lookup(file);
   if(file !== '/' && file !== '/__webpack_hmr' && mimeType === false){
