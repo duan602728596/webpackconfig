@@ -52,6 +52,7 @@
     "koa-webpack-middleware": "^1.0.7",
     "node-sass": "^4.8.0",
     "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "pre-commit": "^1.2.2",
     "pug": "^2.0.1",
     "pug-loader": "github:pugjs/pug-loader",
     "rc-queue-anim": "^1.4.1",
@@ -72,5 +73,8 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
+  },
+  "pre-commit": {
+    "run": ["eslint"]
   }
 }
