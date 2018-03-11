@@ -9,7 +9,7 @@ const path = require('path');
  */
 function getPackageJson(){
   return new Promise((resolve, reject)=>{
-    fs.readFile('./package.json', (err, data)=>{
+    fs.readFile(path.join(__dirname, 'package.json'), (err, data)=>{
       if(err){
         reject(err);
       }else{
@@ -48,8 +48,8 @@ function getVersion(packageName){
     req.end();
   }).then((result)=>{
     const data = JSON.parse(result);
-    const pkg = data.objects[0].package;
-    const version = packageName === pkg.name ? pkg.version : 'No Package';
+    const pkg = data.objects.length > 0 ? data.objects[0].package : null;
+    const version = (pkg && packageName === pkg.name) ? pkg.version : 'No Package';
     return {
       packageName,
       version
