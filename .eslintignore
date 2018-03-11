@@ -1,5 +1,6 @@
 server
 node_modules
 config
+scripts
 .dll
 build
