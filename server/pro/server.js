@@ -3,7 +3,6 @@ const path = require('path');
 const zlib = require('zlib');
 const Koa = require('koa');
 const Router = require('koa-router');
-const logger = require('koa-logger');
 const convert = require('koa-convert');
 const compress = require('koa-compress');
 const staticCache = require('koa-static-cache');
@@ -46,9 +45,6 @@ app.use(compress({
   threshold: 2048,
   flush: zlib.constants.Z_SYNC_FLUSH
 }));
-
-/* 日志 */
-app.use(logger());
 
 /* 缓存 */
 app.use(convert(
