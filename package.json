@@ -11,8 +11,7 @@
     "npmi": "npm install --production",
     "yarni": "yarn install --production=true",
     "server": "node ./server/pro/server",
-    "eslint": "./node_modules/.bin/eslint src",
-    "gv": "node ./scripts/get-version"
+    "eslint": "./node_modules/.bin/eslint src"
   },
   "dependencies": {
     "koa": "^2.5.0",
