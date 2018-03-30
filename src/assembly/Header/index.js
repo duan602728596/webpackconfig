@@ -44,7 +44,7 @@ class Header extends Component{
   // 判断首页home
   oddEvent(item: options, match: Object, location: Object): boolean{
     const { pathname }: { pathname: string } = location;
-    const { href }: { pathname: string } = item;
+    const { href }: { href: string } = item;
     const reg: RegExp = new RegExp(`^${ href }.*$`, 'ig');
     if(len && pathname === '/' && href === navOptions[0].href){
       return true;
