@@ -1,4 +1,4 @@
-# webpack-react的配置文件。
+# webpack-vue的配置文件。
 
 * 输入命令 `$ npm start` 运行开发环境。
 * 输入命令 `$ npm build` 编译到文件夹。
