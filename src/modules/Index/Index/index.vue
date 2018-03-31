@@ -18,6 +18,3 @@
     }
   };
 </script>
-
-<style scoped>
-</style>

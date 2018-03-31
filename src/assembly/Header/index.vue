@@ -39,9 +39,9 @@
       icon: icon['home']
     },
     {
-      id: 'list',
+      id: 'page',
       name: '列表',
-      href: '/List',
+      href: '/Page',
       icon: icon['cog']
     },
     {
