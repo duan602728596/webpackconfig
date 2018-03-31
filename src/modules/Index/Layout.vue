@@ -1,5 +1,6 @@
 <template>
   <Main>
+    <Title title="网站title" />
     <Sider v-bind:options="options" />
     <Content>
       <div>1212</div>
@@ -11,6 +12,7 @@
   import Main from '../../assembly/Main/index.vue';
   import Sider from '../../assembly/Sider/index.vue';
   import Content from '../../assembly/Content/index.vue';
+  import Title from '../../assembly/Title/index.vue';
 
   /* 配置二、三级导航菜单 */
   const options: {
@@ -55,7 +57,8 @@
     components: {
       Main,
       Sider,
-      Content
+      Content,
+      Title
     },
     data(): Object{
       return {
