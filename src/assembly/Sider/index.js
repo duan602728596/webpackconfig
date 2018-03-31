@@ -58,7 +58,7 @@ class Sider extends Component{
         // 当没有children时，返回Menu.Item
         return (
           <Menu.Item key={ item.id }>
-            <Link className={ style.link } to={ item.url }>
+            <Link to={ item.url }>
               { this.hasIcon(item) }
               <span>{ item.name }</span>
             </Link>
