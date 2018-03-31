@@ -1,7 +1,10 @@
 import Vue from 'vue/dist/vue';
+import './element';
 import App from './AppModule.vue';
 import store from './store/store';
 import routers from './router/routers';
+import './common.sass';
+
 
 /* app */
 const app: Vue = new Vue({

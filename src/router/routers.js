@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue';
 import VueRouter from 'vue-router/dist/vue-router';
-import Index from '../modules/Index/index.vue';
+import Index from '../modules/Index/Layout.vue';
 import Page from 'bundle-loader?lazy&name=page!../modules/Page/index.vue';
 
 Vue.use(VueRouter);
@@ -9,7 +9,7 @@ const routers: VueRouter = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/Home',
       name: 'index',
       component: Index
     },
