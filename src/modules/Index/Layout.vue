@@ -19,11 +19,6 @@
       Content,
       Title,
       Index
-    },
-    data(): Object{
-      return {
-        options
-      };
     }
   };
 </script>
