@@ -48,7 +48,7 @@
     "optimize-css-assets-webpack-plugin": "^4.0.0",
     "pre-commit": "^1.2.2",
     "pug": "^2.0.3",
-    "pug-loader": "github:pugjs/pug-loader",
+    "pug-loader": "^2.4.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
