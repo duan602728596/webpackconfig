@@ -31,8 +31,7 @@ const presets = [
       uglify: false
     }
   ],
-  '@babel/preset-flow',
-  '@babel/preset-react'
+  '@babel/preset-flow'
 ];
 
 const plugins = [
