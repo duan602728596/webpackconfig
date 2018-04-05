@@ -35,8 +35,6 @@ const presets = [
 ];
 
 const plugins = [
-  '@babel/plugin-proposal-decorators',
-  '@babel/plugin-proposal-export-default-from',
   '@babel/plugin-proposal-object-rest-spread',
   [
     'component',
