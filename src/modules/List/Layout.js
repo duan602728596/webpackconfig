@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import { Icon } from 'antd';
 import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
 import Content from '../../assembly/Content/index';
-import Title from '../../assembly/Title/index';
 import icon from '../../assembly/Icon/style.sass';
 import Index from './Index/index';
 
@@ -52,10 +52,12 @@ const options: {
 ];
 
 class ModuleLayout extends Component{
-  render(): Object{
-    return (
-      <Main>
-        <Title>列表展示</Title>
+  render(): Array{
+    return [
+      <Helmet key={ 0 }>
+        <title>列表展示</title>
+      </Helmet>,
+      <Main key={ 1 }>
         <Sider options={ options } />
         <Content>
           <Switch>
@@ -67,7 +69,7 @@ class ModuleLayout extends Component{
           </Switch>
         </Content>
       </Main>
-    );
+    ];
   }
 }
 

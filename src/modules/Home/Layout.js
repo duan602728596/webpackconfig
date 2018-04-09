@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import Main from '../../assembly/Main/index';
 import Content from '../../assembly/Content/index';
-import Title from '../../assembly/Title/index';
 import Index from './Index/index';
 
 class ModuleLayout extends Component{
-  render(): Object{
-    return (
-      <Main>
-        <Title />
+  render(): Array{
+    return [
+      <Helmet key={ 0 }>
+        <title>Webpack App</title>
+      </Helmet>,
+      <Main key={ 1 }>
         <Content>
           <Switch>
             <Route path="/" component={ Index } exact={ true } />
@@ -17,7 +19,7 @@ class ModuleLayout extends Component{
           </Switch>
         </Content>
       </Main>
-    );
+    ];
   }
 }
 

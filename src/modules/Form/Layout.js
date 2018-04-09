@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
 import Content from '../../assembly/Content/index';
-import Title from '../../assembly/Title/index';
 import Index from './Index/index';
 
 /* 配置二、三级导航菜单 */
@@ -27,10 +27,12 @@ const options: {
 ];
 
 class ModuleLayout extends Component{
-  render(): Object{
-    return (
-      <Main>
-        <Title>表单展示</Title>
+  render(): Array{
+    return [
+      <Helmet key={ 0 }>
+        <title>表单展示</title>
+      </Helmet>,
+      <Main key={ 1 }>
         <Sider options={ options } />
         <Content>
           <Switch>
@@ -39,7 +41,7 @@ class ModuleLayout extends Component{
           </Switch>
         </Content>
       </Main>
-    );
+    ];
   }
 }
 
