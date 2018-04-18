@@ -60,6 +60,8 @@
     "webpack-cli": "^2.0.13"
   },
   "pre-commit": {
-    "run": ["eslint"]
+    "run": [
+      "eslint"
+    ]
   }
 }
