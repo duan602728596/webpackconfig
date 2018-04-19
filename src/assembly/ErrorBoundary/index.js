@@ -12,6 +12,7 @@ class ErrorBoundary extends Component{
     error: ?any,
     info: ?any
   };
+
   constructor(): void{
     super(...arguments);
     this.state = {
