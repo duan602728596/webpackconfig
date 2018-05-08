@@ -24,7 +24,10 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.46",
     "@babel/plugin-proposal-decorators": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0-beta.46",
     "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0-beta.46",
     "@babel/polyfill": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "@babel/preset-flow": "^7.0.0-beta.46",
@@ -68,7 +71,7 @@
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
-    "webpack": "^4.7.0",
+    "webpack": "^4.8.1",
     "webpack-cli": "^2.1.2"
   },
   "pre-commit": {
