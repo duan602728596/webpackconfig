@@ -41,7 +41,7 @@ class Index extends Component{
     return [
       <Table key={ 0 }
         dataSource={ dataSource() }
-        rowKey={ (item: Object): string=>item.id }
+        rowKey={ (item: Object): string => item.id }
         columns={ this.columns() }
         pagination={{
           defaultPageSize: 20,
