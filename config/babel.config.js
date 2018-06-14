@@ -27,8 +27,7 @@ const presets = [
       },
       debug: debug,
       modules: false,
-      useBuiltIns: 'usage',
-      uglify: false
+      useBuiltIns: 'usage'
     }
   ],
   '@babel/preset-flow',
