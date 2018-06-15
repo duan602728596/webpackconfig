@@ -8,7 +8,7 @@ import Form from 'bundle-loader?lazy&name=form!../modules/Form/Layout';
 const ListBundle: Function = asyncModule(List);
 const FormBundle: Function = asyncModule(Form);
 
-class Router extends Component{
+class Routers extends Component{
   render(): Object{
     return (
       <Switch>
@@ -21,4 +21,4 @@ class Router extends Component{
   }
 }
 
-export default Router;
+export default Routers;
