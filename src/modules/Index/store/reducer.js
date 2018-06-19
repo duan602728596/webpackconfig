@@ -1,10 +1,10 @@
 import { createAction, handleActions } from 'redux-actions';
-import { fromJS } from 'immutable';
+import { fromJS, List } from 'immutable';
 
 const initData: {
-  listDisplay: Object[]
+  listDisplay: Immutable.List
 } = {
-  listDisplay: []
+  listDisplay: List([])
 };
 
 /* Action */
@@ -13,10 +13,10 @@ export const listDisplayChange: Function = createAction('首页列表展示');
 /* reducer */
 const reducer: Function = handleActions({
   [listDisplayChange]: ($$state: Immutable.Map, action: Object): Immutable.Map=>{
-    return $$state.set('listDisplay', action.payload.listDisplay);
+    return $$state.set('listDisplay', List(action.payload.listDisplay));
   }
 }, fromJS(initData));
 
 export default {
-  home: reducer
+  index: reducer
 };

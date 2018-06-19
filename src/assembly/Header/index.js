@@ -21,7 +21,7 @@ export const navOptions: options[] = [
   {
     id: 'home',
     name: '主页',
-    href: '/Home',
+    href: '/Index',
     icon: icon['home']
   },
   {
