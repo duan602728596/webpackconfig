@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import { Layout } from 'antd';
 import style from './style.sass';
 import Header from '../Header/index';
-import Routers from '../../router/routers';
+import Routers from '../../router/Routers';
 
 class MyLayout extends Component{
   render(): Object{
