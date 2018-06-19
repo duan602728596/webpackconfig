@@ -14,7 +14,7 @@ import { listDisplayChange } from '../store/reducer';
 /* state */
 const state: Function = createStructuredSelector({
   listDisplay: createSelector(
-    ($$state: Immutable.Map): Array | Object => $$state.get('index'),
+    ($$state: Immutable.Map): Immutable.Map => $$state.get('index'),
     ($$data: Immutable.Map): Array => $$data.get('listDisplay').toJS()
   )
 });
