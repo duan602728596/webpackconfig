@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { hot } from 'react-hot-loader';
 import Helmet from 'react-helmet';
 import { Icon } from 'antd';
 import Main from '../../assembly/Main/index';
@@ -53,6 +54,7 @@ const options: {
   }
 ];
 
+@hot(module)
 class ModuleLayout extends Component{
   render(): Array{
     return [

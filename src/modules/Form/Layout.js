@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { hot } from 'react-hot-loader';
 import Helmet from 'react-helmet';
 import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
@@ -28,6 +29,7 @@ const options: {
   }
 ];
 
+@hot(module)
 class ModuleLayout extends Component{
   render(): Array{
     return [
