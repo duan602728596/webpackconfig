@@ -27,14 +27,23 @@ const presets = [
       },
       debug: debug,
       modules: false,
-      useBuiltIns: 'usage',
-      uglify: false
+      useBuiltIns: 'usage'
     }
   ],
   '@babel/preset-flow'
 ];
 
 const plugins = [
+  [
+    '@babel/plugin-proposal-decorators',
+    {
+      legacy: true
+    }
+  ],
+  '@babel/plugin-proposal-export-default-from',
+  '@babel/plugin-proposal-do-expressions',
+  '@babel/plugin-proposal-optional-chaining',
+  '@babel/plugin-proposal-class-properties',
   [
     'component',
     {

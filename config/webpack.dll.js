@@ -39,8 +39,7 @@ module.exports = {
                     },
                     debug: false,
                     modules: false,
-                    useBuiltIns: false,
-                    uglify: false
+                    useBuiltIns: false
                   }
                 ]
               ]

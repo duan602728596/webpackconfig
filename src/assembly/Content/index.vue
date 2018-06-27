@@ -16,8 +16,9 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .content
-    padding: 10px
-    overflow: auto
+<style lang="scss" scoped>
+  .content {
+    padding: 10px;
+    overflow: auto;
+  }
 </style>

@@ -1,6 +1,7 @@
 /* webpack配置 */
 const process = require('process');
 const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const babelConfig = require('./babel.config');
 const manifest = require('../.dll/manifest.json');
 
@@ -9,10 +10,14 @@ function config(options){
     mode: process.env.NODE_ENV,
     module: {
       rules: [
-        { // react & js
+        { // js
           test: /^.*\.js$/,
-          use: [babelConfig],
+          use: [babelConfig, 'eslint-loader'],
           exclude: /(dll\.js|node_modules)/
+        },
+        { // vue
+          test: /^.*\.vue$/,
+          use: ['vue-loader']
         },
         {
           test: /dll\.js/,
@@ -77,6 +82,7 @@ function config(options){
       ]
     },
     plugins: [
+      new VueLoaderPlugin(),
       // dll
       new webpack.DllReferencePlugin({
         context: __dirname,

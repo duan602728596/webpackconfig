@@ -32,19 +32,23 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .sider
-    overflow-x: hidden
-    overflow-y: auto
-    border-right: 1px solid #e9e9e9
-    background-color: transparent
-  .item
-    padding: 0
-  .link
-    display: block
-    height: 100%
-    padding: 0 21px
-    color: #0d96ea
-    &:hover
+<style lang="scss" scoped>
+  .sider {
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #e9e9e9;
+    background-color: transparent;
+  }
+  .item {
+    padding: 0;
+  }
+  .link {
+    display: block;
+    height: 100%;
+    padding: 0 21px;
+    color: #0d96ea;
+    &:hover {
       text-decoration: none
+    }
+  }
 </style>

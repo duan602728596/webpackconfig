@@ -25,26 +25,20 @@ module.exports = config({
   module: {
     rules: [
       { // sass
-        test: /^.*\.sass$/,
-        use: ['style-loader', cssConfig, sassConfig]
+        test: /^.*\.s(a|c)ss$/,
+        oneOf: [
+          {
+            resourceQuery: /scoped/,
+            use: ['vue-style-loader', 'css-loader', sassConfig]
+          },
+          {
+            use: ['vue-style-loader', cssConfig, sassConfig]
+          }
+        ]
       },
       { // css
         test: /^.*\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      { // vue
-        test: /^.*\.vue$/,
-        use: [
-          {
-            loader: 'vue-loader',
-            options: {
-              loaders: {
-                js: [babelConfig],
-                css: ['style-loader', cssConfig, sassConfig]
-              }
-            }
-          }
-        ]
+        use: ['vue-style-loader', 'css-loader']
       }
     ]
   },

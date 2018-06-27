@@ -67,40 +67,50 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .header, .logo, .nav
-    position: absolute
-  .header
-    top: 0
-    left: 0
-    right: 0
-    color: #fff
-    background-color: #0d96ea
-  .logo
-    left: 10px
-    top: 12px
-    height: 25px
-  .nav, .nav ul, .nav li, .nav a
-    height: 50px
-  .nav
-    top: 0
-    left: 180px
-    li
-      float: left
-    a
-      display: block
-      padding: 0 11px
-      font-size: 16px
-      line-height: 50px
-      color: #fff
-      -webkit-transition: color .5s, background-color .5s
-      transition: color .5s, background-color .5s
-      &:hover
-        text-decoration: none
-      &.navActive
-        background-color: rgb(34, 91, 238)
-        text-decoration: none
-    span
-      margin-left: 4px
-      vertical-align: 2px
+<style lang="scss" scoped>
+  .header, .logo, .nav {
+    position: absolute;
+  }
+  .header {
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: #0d96ea;
+  }
+  .logo {
+    left: 10px;
+    top: 12px;
+    height: 25px;
+  }
+  .nav, .nav ul, .nav li, .nav a {
+    height: 50px;
+  }
+  .nav {
+    top: 0;
+    left: 180px;
+    li {
+      float: left;
+    }
+    a {
+      display: block;
+      padding: 0 11px;
+      font-size: 16px;
+      line-height: 50px;
+      color: #fff;
+      -webkit-transition: color .5s, background-color .5s;
+      transition: color .5s, background-color .5s;
+      &:hover {
+        text-decoration: none;
+      }
+      &.navActive {
+        background-color: rgb(34, 91, 238);
+        text-decoration: none;
+      }
+    }
+    span {
+      margin-left: 4px;
+      vertical-align: 2px;
+    }
+  }
 </style>

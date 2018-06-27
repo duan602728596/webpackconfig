@@ -22,26 +22,20 @@ module.exports = config({
   module: {
     rules: [
       { // sass
-        test: /^.*\.sass$/,
-        use: [MiniCssExtractPlugin.loader, cssConfig, sassConfig]
+        test: /^.*\.s(a|c)ss$/,
+        oneOf: [
+          {
+            resourceQuery: /scoped/,
+            use: [MiniCssExtractPlugin.loader, 'css-loader', sassConfig]
+          },
+          {
+            use: [MiniCssExtractPlugin.loader, cssConfig, sassConfig]
+          }
+        ]
       },
       { // css
         test: /^.*\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      { // vue
-        test: /^.*\.vue$/,
-        use: [
-          {
-            loader: 'vue-loader',
-            options: {
-              loaders: {
-                js: [babelConfig],
-                css: [MiniCssExtractPlugin.loader, cssConfig, sassConfig]
-              }
-            }
-          }
-        ]
       }
     ]
   },

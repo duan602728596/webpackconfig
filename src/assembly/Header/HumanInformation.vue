@@ -22,24 +22,29 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .humanInformation
-    position: absolute
-    right: 30px
-    top: 14px
-    line-height: 16px
-  .human, .username
-    cursor: default
-  .human
-    font-size: 18px
-  .username
-    margin: 0 20px 0 5px
-    font-size: 14px
-    vertical-align: 2px
-  .tools
-    border: none
-    font-size: 16px
-    background-color: transparent
-    color: #fff
-    cursor: pointer
+<style lang="scss" scoped>
+  .humanInformation {
+    position: absolute;
+    right: 30px;
+    top: 14px;
+    line-height: 16px;
+  }
+  .human, .username {
+    cursor: default;
+  }
+  .human {
+    font-size: 18px;
+  }
+  .username {
+    margin: 0 20px 0 5px;
+    font-size: 14px;
+    vertical-align: 2px;
+  }
+  .tools {
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
 </style>

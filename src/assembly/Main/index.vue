@@ -15,12 +15,13 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .main
-    position: absolute
-    left: 0
-    right: 0
-    top: 50px
-    bottom: 30px
-    background-color: #fff
+<style lang="scss" scoped>
+  .main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 30px;
+    background-color: #fff;
+  }
 </style>

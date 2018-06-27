@@ -24,18 +24,21 @@
   };
 </script>
 
-<style lang="sass" scoped>
-  .layout, .footer
-    position: absolute
-    left: 0
-    right: 0
-  .layout
-    top: 0
-    bottom: 0
-  .footer
-    bottom: 0
-    line-height: 30px
-    font-size: 12px
-    background-color: #ddd
-    text-align: center
+<style lang="scss" scoped>
+  .layout, .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .layout {
+    top: 0;
+    bottom: 0;
+  }
+  .footer {
+    bottom: 0;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #ddd;
+    text-align: center;
+  }
 </style>
