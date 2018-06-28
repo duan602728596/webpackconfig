@@ -4,6 +4,7 @@
  * 渲染二级和三级菜单
  */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import style from './style.sass';
@@ -11,6 +12,13 @@ import ErrorBoundary from '../ErrorBoundary/index';
 
 @withRouter
 class Sider extends Component{
+  static defaultProps: Object = {
+    options: []
+  };
+  static propTypes: Object = {
+    options: PropTypes.array
+  };
+
   // 根据pathname获取默认的selectKey
   getSelectKey(arr: Array): ?string{
     let key: ?string = null;
@@ -68,7 +76,7 @@ class Sider extends Component{
     });
   }
   render(): Object{
-    const options: Array = this.props.options || [];
+    const options: Array = this.props.options;
     const sk: string = this.getSelectKey(options);
     return (
       <ErrorBoundary>

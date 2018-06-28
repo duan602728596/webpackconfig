@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
-import { Form, Input, Radio, Button, Icon } from 'antd';
+import PropTypes from 'prop-types';
+import { Form, Input, Radio, Button } from 'antd';
 import style from './style.sass';
 
 @Form.create()
 class Forms extends Component{
+  static propTypes: Object = {
+    form: PropTypes.object
+  };
+
   onHandleSubmit(event: Event): void{
     event.preventDefault();
     const { validateFields, getFieldsValue }: {

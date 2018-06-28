@@ -2,6 +2,7 @@
  * 首页数据列表展示
  */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector, createStructuredSelector } from 'reselect';
@@ -41,6 +42,12 @@ class ListDisplay extends Component{
   state: {
     loading: boolean
   };
+
+  static propTypes: Object = {
+    listDisplay: PropTypes.array,
+    action: PropTypes.objectOf(PropTypes.func)
+  };
+
   constructor(): void{
     super(...arguments);
 
