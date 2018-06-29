@@ -6,7 +6,6 @@ const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin');
 const config = require('./webpack.config');
 const cssConfig = require('./css.config');
 const sassConfig = require('./sass.config');
-const babelConfig = require('./babel.config');
 
 /* 合并配置 */
 module.exports = config({
