@@ -15,11 +15,11 @@ class ErrorBoundary extends Component{
   };
 
   static propTypes: Object = {
-    children: PropTypes.oneOfType(
+    children: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
       PropTypes.array
-    )
+    ])
   };
 
   constructor(): void{

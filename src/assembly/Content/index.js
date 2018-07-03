@@ -12,11 +12,11 @@ import ErrorBoundary from '../ErrorBoundary/index';
 
 class Content extends Component{
   static propTypes: Object = {
-    children: PropTypes.oneOfType(
+    children: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
       PropTypes.array
-    )
+    ])
   };
 
   render(): Object{

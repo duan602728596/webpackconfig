@@ -10,11 +10,11 @@ import style from './style.sass';
 
 class Main extends Component{
   static propTypes: Object = {
-    children: PropTypes.oneOfType(
+    children: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
       PropTypes.array
-    )
+    ])
   };
 
   render(): Object{
