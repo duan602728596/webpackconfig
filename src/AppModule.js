@@ -9,7 +9,7 @@ import Routers from './router/Routers';
 /* 热替换 */
 @hot(module)
 class App extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <Provider store={ storeFactory(window.shareData) }>
         <BrowserRouter>

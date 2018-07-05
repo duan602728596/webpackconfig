@@ -6,7 +6,7 @@ import List from '../modules/List/Layout';
 import Form from '../modules/Form/Layout';
 
 class ServerRouters extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <Switch>
         <Route path="/" component={ Index } exact={ true } />

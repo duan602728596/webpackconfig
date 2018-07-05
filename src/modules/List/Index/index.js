@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Index extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <div>List</div>
     );

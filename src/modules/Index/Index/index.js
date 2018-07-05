@@ -22,7 +22,7 @@ const dispatch: Function = (dispatch: Function): Object=>({
 
 @connect(state, dispatch)
 class Index extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <div className={ style.text }>{ this.props.text }</div>
     );

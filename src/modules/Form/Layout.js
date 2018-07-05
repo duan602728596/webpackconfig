@@ -5,7 +5,7 @@ import Index from './Index/index';
 
 @hot(module)
 class ModuleLayout extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <Switch>
         <Route path="/Form" component={ Index } exact={ true } />
