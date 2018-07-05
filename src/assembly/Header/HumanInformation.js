@@ -6,7 +6,7 @@ import style from './style.sass';
 import icon from '../Icon/style.sass';
 
 class HumanInformation extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <div className={ style.humanInformation }>
         <i className={ icon.userTie + ' ' + style.human } />

@@ -40,7 +40,7 @@ class Sider extends Component{
     return key;
   }
   // 判断图标的显示
-  hasIcon(item: Object): ?Element{
+  hasIcon(item: Object): ?React.Element{
     if('icon' in item){
       return typeof item.icon === 'string' ? <i className={ style.icon + ' ' + item.icon } /> : item.icon;
     }else{
@@ -48,7 +48,7 @@ class Sider extends Component{
     }
   }
   // 渲染菜单
-  menu(arr: Array): Array{
+  menu(arr: Array): React.ChildrenAray<React.Element>{
     return arr.map((item: Object, index: number): Object=>{
       if('children' in item && item.children.length > 0){
         // 当有children时，返回Menu.SubMenu，里面包裹Menu.Item
@@ -75,7 +75,7 @@ class Sider extends Component{
       }
     });
   }
-  render(): Object{
+  render(): React.Element{
     const options: Array = this.props.options;
     const sk: string = this.getSelectKey(options);
     return (

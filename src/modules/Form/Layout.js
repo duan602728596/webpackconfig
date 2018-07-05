@@ -12,13 +12,13 @@ const options: {
   id: string,
   name: string,
   url: string,
-  icon: ?(string | Element),    // 传入一个字符串或节点
+  icon: ?(string | React.Element),    // 传入一个字符串或节点
   component: Function,
   children: ?{
     id: string,
     name: string,
     url: string,
-    icon: ?(string | Element),  // 传入一个字符串或节点
+    icon: ?(string | React.Element),  // 传入一个字符串或节点
     component: Function
   }[]
 }[] = [
@@ -31,12 +31,12 @@ const options: {
 
 @hot(module)
 class ModuleLayout extends Component{
-  render(): Array{
+  render(): React.ChildrenArray<React.Element>{
     return [
-      <Helmet key={ 0 }>
+      <Helmet key="helmet">
         <title>表单展示</title>
       </Helmet>,
-      <Main key={ 1 }>
+      <Main key="main">
         <Sider options={ options } />
         <Content>
           <Switch>

@@ -6,12 +6,12 @@ import Content from '../../assembly/Content/index';
 import Index from './Index/index';
 
 class ModuleLayout extends Component{
-  render(): Array{
+  render(): React.ChildrenArray<React.Element>{
     return [
-      <Helmet key={ 0 }>
+      <Helmet key="helmet">
         <title>Webpack App</title>
       </Helmet>,
-      <Main key={ 1 }>
+      <Main key="main">
         <Content>
           <Switch>
             <Route path="/" component={ Index } exact={ true } />

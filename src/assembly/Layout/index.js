@@ -12,7 +12,7 @@ import Header from '../Header/index';
 import Routers from '../../router/Routers';
 
 class MyLayout extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <Layout className={ style.layout }>
         <Layout.Header className={ style.header }>

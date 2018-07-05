@@ -9,7 +9,7 @@ const ListBundle: Function = asyncModule(List);
 const FormBundle: Function = asyncModule(Form);
 
 class Routers extends Component{
-  render(): Object{
+  render(): React.Element{
     return (
       <Switch>
         <Route path="/" component={ Index } exact={ true } />

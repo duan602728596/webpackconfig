@@ -19,7 +19,7 @@ class Content extends Component{
     ])
   };
 
-  render(): Object{
+  render(): React.Element{
     return (
       <ErrorBoundary>
         <Layout.Content className={ style.content }>

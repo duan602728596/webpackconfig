@@ -51,7 +51,7 @@ class Header extends Component{
     }
     return match && reg.test(pathname);
   }
-  navList(options: options[]): Array{
+  navList(options: options[]): React.ChildrenArray<React.Element>{
     return options.map((item: options, index: number): Object=>{
       return (
         <li key={ item.id }>
@@ -63,7 +63,7 @@ class Header extends Component{
       );
     });
   }
-  render(): Object{
+  render(): React.Element{
     return (
       <ErrorBoundary>
         <img className={ style.logo } src={ require('./logo.png') } alt="管理平台 demo" title="管理平台 demo" />

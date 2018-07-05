@@ -22,7 +22,7 @@ class Forms extends Component{
       }
     });
   }
-  render(): Object{
+  render(): React.Element{
     const { getFieldDecorator }: { getFieldDecorator: Function } = this.props.form;  // 包装表单控件
     return (
       <Form onSubmit={ this.onHandleSubmit.bind(this) } layout="horizontal">
