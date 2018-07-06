@@ -28,6 +28,7 @@ module.exports = {
     library: '[name]_[hash]',
     libraryTarget: 'var'
   },
+  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-source-map' : 'none',
   module: {
     rules: [
       { // js
