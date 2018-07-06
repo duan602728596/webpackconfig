@@ -12,3 +12,10 @@ export function objectToArray(obj: Object): Function[]{
   }
   return arr;
 }
+
+/**
+ * 合并className
+ */
+export function css(): string{
+  return [...arguments].join(' ');
+}
