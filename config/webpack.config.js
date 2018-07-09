@@ -2,7 +2,7 @@
 const process = require('process');
 const webpack = require('webpack');
 const babelConfig = require('./babel.config');
-const manifest = require('../.dll/manifest.json');
+const manifestJson = require('../.dll/manifest.json');
 
 function config(options){
   const conf = {
@@ -80,8 +80,9 @@ function config(options){
       // dll
       new webpack.DllReferencePlugin({
         context: __dirname,
-        manifest: manifest
-      })
+        manifest: manifestJson
+      }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ],
     optimization: {
       runtimeChunk: {
