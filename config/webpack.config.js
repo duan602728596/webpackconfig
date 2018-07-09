@@ -82,7 +82,12 @@ function config(options){
         context: __dirname,
         manifest: manifest
       })
-    ]
+    ],
+    optimization: {
+      runtimeChunk: {
+        name: 'manifest'
+      }
+    }
   };
 
   /* 合并 */
