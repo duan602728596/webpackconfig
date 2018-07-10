@@ -8,7 +8,7 @@
   import Layout from './assembly/Layout/index.vue';
 
   export default {
-    name: 'ApModule',
+    name: 'AppModule',
     components: {
       Layout
     }
