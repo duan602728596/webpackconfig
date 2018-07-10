@@ -52,8 +52,6 @@
     }
   ];
 
-  const len: boolean = navOptions.length > 0;
-
   export default {
     name: 'Header',
     components: {
