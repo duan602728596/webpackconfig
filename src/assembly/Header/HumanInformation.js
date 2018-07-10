@@ -2,7 +2,7 @@
  * 登录人信息
  */
 import React, { Component } from 'react';
-import { css } from '../../unit';
+import { css } from '../../utilities';
 import style from './style.sass';
 import icon from '../Icon/style.sass';
 

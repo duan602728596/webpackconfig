@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
-import { css } from '../../unit';
+import { css } from '../../utilities';
 import style from './style.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
 

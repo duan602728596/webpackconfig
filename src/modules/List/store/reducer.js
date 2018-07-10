@@ -1,6 +1,6 @@
 import { handleActions, combineActions } from 'redux-actions';
 import { fromJS } from 'immutable';
-import { objectToArray } from '../../../unit';
+import { objectToArray } from '../../../utilities';
 import module1Reducer, * as module1Action from './module1';
 
 const initData: {
