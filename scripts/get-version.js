@@ -119,7 +119,7 @@ function consoleLogText(packageArray){
     const isLatestNew = isVersionEqual(item.version, item.latest);
     const isNextNew = isVersionEqual(item.version, item.next);
     const isRcNew = isVersionEqual(item.version, item.rc);
-    consoleText += `${ isLatestNew || isNextNew || isRcNew ? '  ' : '↑' }${ item.name }:\n`;
+    consoleText += `${ isLatestNew || isNextNew || isRcNew ? '  ' : '* ' }${ item.name }:\n`;
     consoleText += `    version: ${ item.version }\n`;
     if(item.latest){
       consoleText += `    latest : ${ formatVersion(item.version, item.latest) }\n`;
