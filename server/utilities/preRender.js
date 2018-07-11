@@ -11,7 +11,7 @@ function preRender(html, file, context){
   const render = server(file, context, initialState);
   return replaceTemplate(html.toString(), {
     render,
-    initialState: JSON.stringify(shareData)
+    initialState: JSON.stringify(initialState)
   });
 }
 

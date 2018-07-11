@@ -20,6 +20,7 @@ function config(){
       libraryTarget: 'umd'
     },
     target: 'node',
+    devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-source-map' : 'none',
     node: {
       __filename: false,
       __dirname: false
