@@ -10,9 +10,9 @@ const reducer: Function = createReducer({});
 /* 中间件 */
 const middlewares: Function = applyMiddleware(thunk);
 
-function storeFactory(shareData: ?Object): Object{
+function storeFactory(initState: ?Object): Object{
   /* initialState */
-  const $$initialState: Immutable.Map = Map(fromJS(shareData));
+  const $$initialState: Immutable.Map = Map(fromJS(initState));
 
   /* store */
   const store: Object = createStore(reducer, $$initialState, compose(middlewares));

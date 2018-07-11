@@ -11,7 +11,7 @@ import Routers from './router/Routers';
 class App extends Component{
   render(): React.Element{
     return (
-      <Provider store={ storeFactory(window.shareData) }>
+      <Provider store={ storeFactory(window.__INIT_STATE__) }>
         <BrowserRouter>
           <Switch>
             <Routers />

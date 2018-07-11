@@ -8,5 +8,5 @@ html
     title Webpack App
   body
     div.react-app#react-app(data-app)=htmlWebpackPlugin.options.sign.render
-    script='window.shareData = ' + htmlWebpackPlugin.options.sign.shareData + ';'
+    script='window.__INIT_STATE__ = ' + htmlWebpackPlugin.options.sign.initState + ';'
     script(type='text/javascript' src=require('../.dll/dll'))

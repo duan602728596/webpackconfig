@@ -6,9 +6,9 @@ import storeFactory from './store/store';
 import './common.sass';
 import ServerRouters from './router/ServerRouters';
 
-function server(url: string, context: Object = {}, shareData: Object): string{
+function server(url: string, context: Object = {}, initState: Object): string{
   return renderToString(
-    <Provider store={ storeFactory(shareData) }>
+    <Provider store={ storeFactory(initState) }>
       <StaticRouter location={ url } context={ context }>
         <Switch>
           <ServerRouters />
