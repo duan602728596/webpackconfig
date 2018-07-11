@@ -3,12 +3,12 @@ const server = require('../../build-server/server').default;
 
 // 渲染新的html
 function preRender(html, file, context){
-  const shareData = {
+  const initialState = {
     index: {
       text: 'Hello, world!'
     }
   };
-  const render = server(file, context, shareData);
+  const render = server(file, context, initialState);
   return replaceTemplate(html.toString(), {
     render,
     initialState: JSON.stringify(shareData)
