@@ -5,8 +5,8 @@ import Index from '../modules/Index/Layout';
 import List from 'bundle-loader?lazy&name=list!../modules/List/Layout';
 import Form from 'bundle-loader?lazy&name=form!../modules/Form/Layout';
 
-export const ListBundle: Function = asyncModule(List);
-export const FormBundle: Function = asyncModule(Form);
+const ListBundle: Function = asyncModule(List);
+const FormBundle: Function = asyncModule(Form);
 
 class Routers extends Component{
   render(): React.Element{
