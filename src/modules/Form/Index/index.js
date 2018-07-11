@@ -9,7 +9,7 @@ class Forms extends Component{
     form: PropTypes.object
   };
 
-  onHandleSubmit(event: Event): void{
+  handleSubmit(event: Event): void{
     event.preventDefault();
     const { validateFields, getFieldsValue }: {
       validateFields: Function,
@@ -25,7 +25,7 @@ class Forms extends Component{
   render(): React.Element{
     const { getFieldDecorator }: { getFieldDecorator: Function } = this.props.form;  // 包装表单控件
     return (
-      <Form onSubmit={ this.onHandleSubmit.bind(this) } layout="horizontal">
+      <Form onSubmit={ this.handleSubmit.bind(this) } layout="horizontal">
         <Form.Item className={ style.formGroup } label="姓名">
           {
             getFieldDecorator('name', {
