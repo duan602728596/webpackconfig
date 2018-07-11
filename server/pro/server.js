@@ -8,7 +8,7 @@ const compress = require('koa-compress');
 const staticCache = require('koa-static-cache');
 const mime = require('mime-types');
 const readFile = require('./readFile');
-const preRender = require('../utilities/preRender');
+const preRender = require('../utilities/preProRender');
 
 const app = new Koa();
 const router = new Router();

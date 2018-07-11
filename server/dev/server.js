@@ -3,7 +3,7 @@ const Koa = require('koa');
 const convert = require('koa-convert');
 const mime = require('mime-types');
 const middleware = require('./middleware');
-const preRender = require('../utilities/preRender');
+const preRender = require('../utilities/preDevRender');
 
 const app = new Koa();
 const port = 5050; // 配置端口
