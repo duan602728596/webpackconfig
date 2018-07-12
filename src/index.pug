@@ -7,6 +7,6 @@ html
     link(rel='shortcut icon' href=require('./favicon.ico'))
     title Webpack App
   body
-    div.react-app#react-app(data-app)=htmlWebpackPlugin.options.sign.render
-    script='window.__INITIAL_STATE__ = ' + htmlWebpackPlugin.options.sign.initialState + ';'
+    div.react-app#react-app(data-app) {% render %}
+    script= 'window.__INITIAL_STATE__ = {% initialState %};'
     script(type='text/javascript' src=require('../.dll/dll'))
