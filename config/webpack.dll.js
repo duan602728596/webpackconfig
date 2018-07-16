@@ -17,7 +17,8 @@ module.exports = {
       'redux-actions',
       'immutable',
       'redux-immutable',
-      'reselect'
+      'reselect',
+      'react-helmet'
     ]
   },
   output: {
