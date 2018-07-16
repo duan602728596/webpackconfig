@@ -6,8 +6,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
+import classNames from 'classnames';
 import { Layout, Menu } from 'antd';
-import { css } from '../../utilities';
 import style from './style.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
 
@@ -43,7 +43,7 @@ class Sider extends Component{
   // 判断图标的显示
   hasIcon(item: Object): ?React.Element{
     if('icon' in item){
-      return typeof item.icon === 'string' ? <i className={ css(style.icon, item.icon) } /> : item.icon;
+      return typeof item.icon === 'string' ? <i className={ classNames(style.icon, item.icon) } /> : item.icon;
     }else{
       return null;
     }

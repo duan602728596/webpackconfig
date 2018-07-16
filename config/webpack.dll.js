@@ -18,8 +18,7 @@ module.exports = {
       'immutable',
       'redux-immutable',
       'reselect',
-      'react-helmet',
-      'rc-queue-anim'
+      'react-helmet'
     ]
   },
   output: {

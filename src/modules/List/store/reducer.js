@@ -1,6 +1,5 @@
 import { handleActions, combineActions } from 'redux-actions';
 import { fromJS } from 'immutable';
-import { objectToArray } from '../../../utilities';
 import module1Reducer, * as module1Action from './module1';
 
 const initData: {
@@ -11,7 +10,7 @@ const initData: {
 
 /* reducer */
 const reducer: Function = handleActions({
-  [combineActions(...objectToArray(module1Action))]: ($$state: Immutable.Map, action: Object): Immutable.Map=>{
+  [combineActions(...Object.values(module1Action))]: ($$state: Immutable.Map, action: Object): Immutable.Map=>{
     return $$state.set('module1', module1Reducer($$state.get('module1'), action));
   }
 }, fromJS(initData));
