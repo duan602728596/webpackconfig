@@ -58,4 +58,4 @@ router.get(/^.*\.[a-zA-Z0-9]+$/, async(ctx, next)=>{
 });
 
 app.listen(port);
-console.log('\x1B[32m%s\x1B[39m', `\nListening at port:${ port }.\n`);
+console.log('\x1B[32m%s\x1B[39m', `\nListening at port: ${ port }.\n`);
