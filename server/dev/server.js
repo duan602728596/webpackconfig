@@ -32,5 +32,5 @@ const server = app.listen(port, (err)=>{
     console.error(err);
     return false;
   }
-  console.log('\x1B[32m%s\x1B[39m', `\nListening at port:${ port }.\n`);
+  console.log('\x1B[32m%s\x1B[39m', `\nListening at port: ${ port }.\n`);
 });
