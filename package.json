@@ -3,16 +3,16 @@
   "description": "webpack + react配置",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=development node ./server/dev/server",
-    "build": "npm run clean && cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.pro.js --progress",
-    "clean": "./node_modules/.bin/rimraf build",
-    "devdll": "cross-env NODE_ENV=development ./node_modules/.bin/webpack --config ./config/webpack.dll.js --progress",
-    "prodll": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config ./config/webpack.dll.js --progress",
+    "start": "cross-env NODE_ENV=development supervisor -w ./server,./config ./server/dev/server",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.pro.js --progress",
+    "clean": "rimraf ./build",
+    "devdll": "cross-env NODE_ENV=development webpack --config ./config/webpack.dll.js --progress",
+    "prodll": "cross-env NODE_ENV=production webpack --config ./config/webpack.dll.js --progress",
     "npmi": "npm install --production",
     "yarni": "yarn install --production=true",
     "server": "node ./server/pro/server",
-    "eslint": "./node_modules/.bin/eslint src",
-    "get-version": "node bin/get-version.js"
+    "eslint": "eslint src",
+    "get-version": "node ./bin/get-version.js"
   },
   "dependencies": {
     "koa": "^2.5.2",
@@ -74,6 +74,7 @@
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "supervisor": "^0.12.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.0",
