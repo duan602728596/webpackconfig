@@ -3,9 +3,9 @@ const server = require('../../build-server/server').default;
 const interfaces = require('../../service/interface/interfaces');
 
 // 渲染新的html
-async function preRender(html, file, context){
+async function preRender(html, file, ctx){
   const initialState = await interfaces(file);
-  const render = server(file, context, initialState);
+  const render = server(file, {}, initialState);
   return replaceTemplate(html.toString(), {
     render,
     title: initialState.title,
