@@ -5,8 +5,8 @@ function dataSource(): Object[]{
   const arr: Object[] = [];
   for(let i: number = 0, j: number = 32; i < j; i++){
     arr.push({
-      id: `PRO${ i }`,
-      name: `胡彦斌${ i }`,
+      id: `PRO${i}`,
+      name: `胡彦斌${i}`,
       age: 20 + i,
       address: '西湖区湖底公园1号'
     });

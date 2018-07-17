@@ -31,7 +31,7 @@ function simulationData(): Promise{
   return new Promise((resolve: Function, reject: Function): void=>{
     const data: string[] = [];
     for(let i: number = 0, j: number = 18; i < j; i++){
-      data.push(`这是一条测试数据 ${ i }`);
+      data.push(`这是一条测试数据 ${i}`);
     }
     setTimeout(resolve, 1500, data);
   });
