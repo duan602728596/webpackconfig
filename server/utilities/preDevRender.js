@@ -12,7 +12,7 @@ function cleanRequireCache(module){
 
 // 渲染新的html
 async function preRender(html, file, ctx){
-  const initialState = await interfaces(file);
+  const initialState = await interfaces(file, ctx);
   cleanRequireCache('../../build-server/server');
   const server = require('../../build-server/server').default;
   const render = server(file, {}, initialState);

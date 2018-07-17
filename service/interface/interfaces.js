@@ -11,12 +11,12 @@ function pathAnalyze(file){
   }
 }
 
-async function interfaces(file){
+async function interfaces(file, ctx){
   const initialState = {
     time: new Date().getTime()
   };
   const filePath = path.resolve(__dirname, 'api', `${ pathAnalyze(file) }.js`);
-  const api = fs.existsSync(filePath) ? await require(filePath)() : {};
+  const api = fs.existsSync(filePath) ? await require(filePath)(ctx) : {};
   return Object.assign(initialState, api);
 }
 

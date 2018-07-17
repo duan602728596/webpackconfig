@@ -4,7 +4,7 @@ const interfaces = require('../../service/interface/interfaces');
 
 // 渲染新的html
 async function preRender(html, file, ctx){
-  const initialState = await interfaces(file);
+  const initialState = await interfaces(file, ctx);
   const render = server(file, {}, initialState);
   return replaceTemplate(html.toString(), {
     render,
