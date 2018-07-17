@@ -120,7 +120,7 @@ rules:
   require-yield: error                                # 要求 generator 函数内有 yield
   template-curly-spacing:                             # 要求或禁止模板字符串中的嵌入表达式周围空格的使用
     - error
-    - never
+    - always
   # React
   react/button-has-type: error                        # 禁止<button>元素没有显式的"type"属性
   react/prefer-es6-class:                             # 使用ES5创建反应类模块或新的ES6类系统

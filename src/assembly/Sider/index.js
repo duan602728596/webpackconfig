@@ -23,7 +23,7 @@ class Sider extends Component{
   // 根据pathname获取默认的selectKey
   getSelectKey(arr: Array): ?string{
     let key: ?string = null;
-    const reg: RegExp = new RegExp(`^${this.props.location.pathname}.*$`, 'ig');
+    const reg: RegExp = new RegExp(`^${ this.props.location.pathname }.*$`, 'ig');
     for(let i: number = 0, j: number = arr.length; i < j; i++){
       if('children' in arr[i] && arr[i].children.length > 0){
         const key2: ?string = this.getSelectKey(arr[i].children);
