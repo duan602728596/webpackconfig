@@ -15,7 +15,8 @@
     "yarni": "yarn install --production=true",
     "server": "node ./server/pro/server",
     "eslint": "eslint ./src",
-    "get-version": "node ./bin/get-version.js"
+    "get-version": "node ./bin/get-version.js",
+    "find": "node ./bin/find.js"
   },
   "dependencies": {
     "koa": "^2.5.2",
