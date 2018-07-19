@@ -2,7 +2,6 @@
 const http = require('http');
 const Koa = require('koa');
 const Router = require('koa-router');
-const convert = require('koa-convert');
 const mime = require('mime-types');
 const webpack = require('webpack');
 const koaWebpack = require('koa-webpack');
