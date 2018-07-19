@@ -13,7 +13,8 @@ function pathAnalyze(file){
 
 async function interfaces(file, ctx){
   const initialState = {
-    time: new Date().getTime()
+    time: new Date().getTime(),
+    title: 'Webpack App'
   };
   const filePath = path.resolve(__dirname, 'api', `${ pathAnalyze(file) }.js`);
   const api = fs.existsSync(filePath) ? await require(filePath)(ctx) : {};
