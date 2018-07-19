@@ -26,6 +26,7 @@ class Forms extends Component{
     const { getFieldDecorator }: { getFieldDecorator: Function } = this.props.form;  // 包装表单控件
     return (
       <Form onSubmit={ this.handleSubmit.bind(this) } layout="horizontal">
+        <img src={ require('./image.jpg') } />
         <Form.Item className={ style.formGroup } label="姓名">
           {
             getFieldDecorator('name', {
