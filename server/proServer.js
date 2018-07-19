@@ -7,6 +7,7 @@ const zlib = require('zlib');
 const Koa = require('koa');
 const Router = require('koa-router');
 const convert = require('koa-convert');
+const body = require('koa-body');
 const compress = require('koa-compress');
 const staticCache = require('koa-static-cache');
 const mime = require('mime-types');
@@ -50,6 +51,8 @@ app.use(convert(
     maxAge: 60 * 60 * 24 * 365
   })
 ));
+
+app.use(body());
 
 /* router */
 app.use(router.routes())
