@@ -31,6 +31,7 @@ const router = new Router();
     const mimeType = mime.lookup(file);
     if(file !== '/' && mimeType === false){
       ctx.path = '/';
+      ctx._path = file;
     }
     await next();
   });
