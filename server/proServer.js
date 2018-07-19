@@ -1,4 +1,7 @@
 /* 生产环境 服务器 */
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 const Koa = require('koa');
@@ -7,16 +10,33 @@ const convert = require('koa-convert');
 const compress = require('koa-compress');
 const staticCache = require('koa-static-cache');
 const mime = require('mime-types');
-const readFile = require('./readFile');
 
 const app = new Koa();
 const router = new Router();
-const port = 5051;                                       // 配置端口
-const serverFile = path.join(__dirname, '/../../build'); // 文件夹地址
+const serverFile = path.join(__dirname, '/../build');
+
+/* 读取文件 */
+function readFile(file){
+  return new Promise((resolve, reject)=>{
+    fs.readFile(file, (err, data)=>{
+      if(err){
+        resolve({
+          status: 404,
+          body: '404 not found.'
+        });
+      }else{
+        resolve({
+          status: 200,
+          body: data
+        });
+      }
+    });
+  });
+}
 
 /* gzip压缩 */
 app.use(compress({
-  filter: function(content_type){
+  filter: function(contentType){
     return true;
   },
   threshold: 2048,
@@ -57,5 +77,11 @@ router.get(/^.*\.[a-zA-Z0-9]+$/, async(ctx, next)=>{
   await next();
 });
 
-app.listen(port);
-console.log('\x1B[32m%s\x1B[39m', `\nListening at port: ${ port }.\n`);
+/* 服务 */
+http.createServer(app.callback()).listen(5051);
+/*
+https.createServer({
+  key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
+}, app.callback()).listen(443);
+*/

@@ -9,12 +9,6 @@ const lessConfig = require('./less.config');
 
 /* 合并配置 */
 module.exports = config({
-  entry: {
-    app: [
-      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=500&reload=true',
-      path.join(__dirname, '../src/app.js')
-    ]
-  },
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'script/[name].js',
@@ -35,8 +29,6 @@ module.exports = config({
     ]
   },
   plugins: [
-    // 热更新
-    new webpack.HotModuleReplacementPlugin(),
     // html模板
     new HtmlWebpackPlugin({
       inject: true,
