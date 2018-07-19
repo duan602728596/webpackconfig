@@ -5,10 +5,10 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development supervisor -w ./server,./config,./service ./server/devServer.js",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.pro.js --progress",
-    "server-start": "npm run server-clean && cross-env NODE_ENV=development webpack --config ./config-server/webpack.config.server.js --watch",
-    "server-build": "npm run server-clean && cross-env NODE_ENV=production webpack --config ./config-server/webpack.config.server.js --progress",
+    "start-server": "npm run clean-server && cross-env NODE_ENV=development webpack --config ./config-server/webpack.config.server.js --watch",
+    "build-server": "npm run clean-server && cross-env NODE_ENV=production webpack --config ./config-server/webpack.config.server.js --progress",
     "clean": "rimraf ./build",
-    "server-clean": "rimraf ./build-server",
+    "clean-server": "rimraf ./build-server",
     "devdll": "cross-env NODE_ENV=development webpack --config ./config/webpack.dll.js --progress",
     "prodll": "cross-env NODE_ENV=production webpack --config ./config/webpack.dll.js --progress",
     "npmi": "npm install --production",
