@@ -12,7 +12,7 @@ module.exports = config({
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'script/[name].[chunkhash].js',
-    chunkFilename: 'script/[name].[chunkhash].js',
+    chunkFilename: 'script/[name].chunk.[chunkhash].js',
     publicPath: '/'
   },
   module: {
