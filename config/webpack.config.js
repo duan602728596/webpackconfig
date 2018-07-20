@@ -93,12 +93,7 @@ function config(options){
         manifest: manifestJson
       }),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-    ],
-    optimization: {
-      runtimeChunk: {
-        name: 'manifest'
-      }
-    }
+    ]
   };
 
   /* 合并 */
