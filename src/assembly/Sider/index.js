@@ -17,7 +17,10 @@ class Sider extends Component{
     options: []
   };
   static propTypes: Object = {
-    options: PropTypes.array
+    options: PropTypes.array,
+    history: PropTypes.object,
+    location: PropTypes.object,
+    match: PropTypes.object
   };
 
   // 根据pathname获取默认的selectKey
