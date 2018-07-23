@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('./webpack.config');
 const cssConfig = require('./css.config');
 const sassConfig = require('./sass.config');
+const postCssConfig = require('./postcss.config');
 
 /* 合并配置 */
 module.exports = config({
@@ -22,10 +23,10 @@ module.exports = config({
         oneOf: [
           {
             resourceQuery: /scoped/,
-            use: ['vue-style-loader', 'css-loader', sassConfig]
+            use: ['vue-style-loader', 'css-loader', postCssConfig, sassConfig]
           },
           {
-            use: ['vue-style-loader', cssConfig, sassConfig]
+            use: ['vue-style-loader', cssConfig, postCssConfig, sassConfig]
           }
         ]
       },
