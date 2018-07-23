@@ -10,7 +10,7 @@
     "prodll": "cross-env NODE_ENV=production webpack --config ./config/webpack.dll.js --progress",
     "npmi": "npm install --production",
     "yarni": "yarn install --production=true",
-    "server": "node ./server/proServer.js",
+    "server": "cross-env NODE_ENV=production node ./server/proServer.js",
     "eslint": "eslint ./src",
     "get-version": "node ./bin/get-version.js",
     "find": "node ./bin/find.js"
