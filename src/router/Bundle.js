@@ -9,7 +9,8 @@ class Bundle extends Component{
   };
 
   static propTypes: Object = {
-    load: PropTypes.func
+    load: PropTypes.func,
+    children: PropTypes.func
   };
 
   constructor(): void{
