@@ -1,5 +1,6 @@
 /* 开发环境 */
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('./webpack.config');
 const cssConfig = require('./css.config');
