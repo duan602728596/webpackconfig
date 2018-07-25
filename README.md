@@ -3,7 +3,6 @@
 * 输入命令 `$ npm start` 运行开发环境。
 * 输入命令 `$ npm build` 编译到文件夹。
 * 输入命令 `$ npm run devdll` 编译开发环境dll文件。
-* 输入命令 `$ npm run prodll` 编译生产环境编译dll文件。
 * 输入命令 `$ npm run npmi` 或 `$ yarn run yarni` 安装生产环境依赖。
 * 输入命令 `$ npm run server-start` 编译服务器端开发环境代码。
 * 输入命令 `$ npm run server-build` 编译服务器端生产环境代码。
