@@ -9,5 +9,5 @@ html
   body
     div.react-app#react-app(data-app) {% render %}
     script= 'window.__INITIAL_STATE__ = {% initialState %};'
-    if process.env.NODE_ENV === 'development'
+    if htmlWebpackPlugin.options.NODE_ENV === 'development'
       script(type='text/javascript' src=require('../.dll/dll'))
