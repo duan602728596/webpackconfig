@@ -52,5 +52,11 @@ module.exports = config({
       chunkFilename: 'style/[name].chunk.[chunkhash].css'
     }),
     new OptimizeCssAssets()
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      automaticNameDelimiter: '.'
+    }
+  }
 });
