@@ -14,7 +14,7 @@ module.exports = config({
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'script/[name].[chunkhash].js',
-    chunkFilename: 'script/[name].chunk.[chunkhash].js',
+    chunkFilename: 'script/[name].[chunkhash].js',
     publicPath: '/'
   },
   module: {
@@ -42,7 +42,7 @@ module.exports = config({
     }),
     new MiniCssExtractPlugin({
       filename: 'style/[name].[chunkhash].css',
-      chunkFilename: 'style/[name].chunk.[chunkhash].css'
+      chunkFilename: 'style/[name].[chunkhash].css'
     }),
     new OptimizeCssAssets()
   ],
