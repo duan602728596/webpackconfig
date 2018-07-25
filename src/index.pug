@@ -8,5 +8,5 @@ html
     title Webpack App
   body
     div.react-app#react-app(data-app)
-    if process.env.NODE_ENV === 'development'
+    if htmlWebpackPlugin.options.NODE_ENV === 'development'
       script(type='text/javascript' src=require('../.dll/dll'))
