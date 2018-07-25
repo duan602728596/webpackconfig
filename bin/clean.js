@@ -50,6 +50,18 @@ function readdir(filePath){
 }
 
 (async function(){
-  // 删除dll文件
-  await unlink(path.resolve(__dirname, '../build/script/dll.js'));
+  try{
+    // 删除dll文件
+    const scriptsPath = path.resolve(__dirname, '../build/script');
+    const scripts = await readdir(scriptsPath);
+    for(let i = 0, j = scripts.length; i < j; i++){
+      const item = scripts[i];
+      if(/^dll\./.test(item)){
+        await unlink(path.resolve(scriptsPath, item));
+        break;
+      }
+    }
+  }catch(err){
+    console.error(err);
+  }
 })();
