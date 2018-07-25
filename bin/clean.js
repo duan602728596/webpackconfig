@@ -52,11 +52,23 @@ function readdir(filePath){
 (async function(){
   try{
     // 删除dll文件
-    await unlink(path.resolve(__dirname, '../build/script/dll.js'));
-    // 删除rmdir
-    const imgPath = path.resolve(__dirname, '../build-server/image');
-    if(fs.existsSync(imgPath)){
-      await rmdir(imgPath);
+    const scriptsPath = path.resolve(__dirname, '../build/script');
+    const scripts = await readdir(scriptsPath);
+    for(let i = 0, j = scripts.length; i < j; i++){
+      const item = scripts[i];
+      if(/^dll\./.test(item)){
+        await unlink(path.resolve(scriptsPath, item));
+        break;
+      }
+    }
+    // 删除build-server的image
+    const buildServerImagePath = path.resolve(__dirname, '../build-server/image');
+    if(fs.existsSync(buildServerImagePath)){
+      const images = await readdir(buildServerImagePath);
+      for(let i = 0, j = images.length; i < j; i++){
+        await unlink(path.resolve(buildServerImagePath, images[i]));
+      }
+      await rmdir(buildServerImagePath);
     }
   }catch(err){
     console.error(err);
