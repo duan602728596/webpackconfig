@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development supervisor -w ./server,./config ./server/devServer.js",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.pro.js --progress && node ./bin/clean.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config ./config/webpack.pro.js --progress",
     "clean": "rimraf ./build",
     "devdll": "cross-env NODE_ENV=development webpack --config ./config/webpack.dll.js --progress",
     "npmi": "npm install --production",

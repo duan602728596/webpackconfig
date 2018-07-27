@@ -63,7 +63,7 @@ module.exports = {
     // dll
     new webpack.DllPlugin({
       path: '.dll/manifest.json',
-      name: '[name]_[hash]',
+      name: '[name]_[hash:5]',
       context: __dirname
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
