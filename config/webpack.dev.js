@@ -14,7 +14,7 @@ module.exports = config({
   output: {
     path: path.join(__dirname, '../build'),
     filename: 'script/[name].js',
-    chunkFilename: 'script/[name].chunk.js',
+    chunkFilename: 'script/[name].js',
     publicPath: '/'
   },
   devtool: 'cheap-module-source-map',
@@ -39,7 +39,6 @@ module.exports = config({
     // html模板
     new HtmlWebpackPlugin({
       inject: true,
-      hash: true,
       template: path.join(__dirname, '../src/index.pug'),
       NODE_ENV: process.env.NODE_ENV
     })
