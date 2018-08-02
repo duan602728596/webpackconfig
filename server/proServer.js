@@ -81,11 +81,15 @@ router.get(/^.*\.[a-zA-Z0-9]+$/, async(ctx, next)=>{
   await next();
 });
 
-/* 服务 */
-http.createServer(app.callback()).listen(5051);
-/*
-https.createServer({
-  key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
-  cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
-}, app.callback()).listen(443);
-*/
+/* http服务 */
+http.createServer(app.callback()).listen(process.env.HTTP_SERVER_PORT || 5051);
+
+/* https服务 */
+const key = path.resolve(__dirname, '../server.key');
+const crt = path.resolve(__dirname, '../server.crt');
+if(fs.existsSync(key) && fs.existsSync(crt)){
+  https.createServer({
+    key: fs.readFileSync(key),
+    cert: fs.readFileSync(crt)
+  }, app.callback()).listen(process.env.HTTPS_SERVER_PORT || 443);
+}

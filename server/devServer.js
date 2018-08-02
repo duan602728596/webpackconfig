@@ -47,6 +47,6 @@ const router = new Router();
     }
   });
 
-  /* 服务 */
-  http.createServer(app.callback()).listen(5050);
+  /* http服务 */
+  http.createServer(app.callback()).listen(process.env.HTTP_SERVER_PORT || 5050);
 })();
