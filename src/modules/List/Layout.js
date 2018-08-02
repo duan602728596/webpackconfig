@@ -58,10 +58,10 @@ const options: {
 class ModuleLayout extends Component{
   render(): React.ChildrenArray<React.Element>{
     return [
-      <Helmet key={ 0 }>
+      <Helmet key="helmet">
         <title>列表展示</title>
       </Helmet>,
-      <Main key={ 1 }>
+      <Main key="main">
         <Sider options={ options } />
         <Content>
           <Switch>
