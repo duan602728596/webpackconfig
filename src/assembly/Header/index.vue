@@ -66,15 +66,12 @@
 </script>
 
 <style lang="scss" scoped>
-  .header, .logo, .nav {
-    position: absolute;
-  }
   .header {
-    top: 0;
-    left: 0;
-    right: 0;
     color: #fff;
     background-color: #0d96ea;
+  }
+  .logo, .nav {
+    position: absolute;
   }
   .logo {
     left: 10px;

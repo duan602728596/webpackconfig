@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-app" id="vue-app">
+  <div class="vue-app" id="vue-app" style="height: 100%;">
     <Layout />
   </div>
 </template>
@@ -20,8 +20,5 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-  .vue-app {
-    position: relative;
   }
 </style>
