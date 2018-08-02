@@ -14,8 +14,9 @@ class Content extends Component{
   static propTypes: Object = {
     children: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.element,
-      PropTypes.array
+      PropTypes.number,
+      PropTypes.array,
+      PropTypes.element
     ])
   };
 

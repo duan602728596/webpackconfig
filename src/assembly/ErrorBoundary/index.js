@@ -17,8 +17,9 @@ class ErrorBoundary extends Component{
   static propTypes: Object = {
     children: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.element,
-      PropTypes.array
+      PropTypes.number,
+      PropTypes.array,
+      PropTypes.element
     ])
   };
 
@@ -48,8 +49,9 @@ class ErrorBoundary extends Component{
           <pre className={ style.pre }>{ this.state.info.componentStack }</pre>
         </Content>
       );
+    }else{
+      return this.props.children;
     }
-    return this.props.children;
   }
 }
 
