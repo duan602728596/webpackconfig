@@ -2,6 +2,7 @@
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
+const process = require('process');
 const path = require('path');
 const zlib = require('zlib');
 const Koa = require('koa');
