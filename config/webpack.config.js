@@ -7,9 +7,11 @@ const babelConfig = require('./babel.config');
 
 function config(options){
   const { NODE_ENV } = process.env;
-  const fileName = NODE_ENV === 'development' ? '[name].[ext]' : '[hash:5].[ext]';
+  const isDevelopment = NODE_ENV === 'development';
+  const fileName = isDevelopment ? '[name].[ext]' : '[hash:5].[ext]';
   const conf = {
     mode: NODE_ENV,
+    devtool: isDevelopment ? 'cheap-module-source-map' : 'none',
     entry: {
       app: [path.join(__dirname, '../src/app.js')]
     },
@@ -74,7 +76,7 @@ function config(options){
             {
               loader: 'pug-loader',
               options: {
-                pretty: NODE_ENV === 'development',
+                pretty: isDevelopment,
                 name: '[name].html'
               }
             }
@@ -97,7 +99,6 @@ function config(options){
   conf.module.rules = conf.module.rules.concat(options.module.rules);       // 合并rules
   conf.plugins = conf.plugins.concat(options.plugins);                      // 合并插件
   conf.output = options.output;                                             // 合并输出目录
-  if('devtool' in options) conf.devtool = options.devtool;                  // 合并source-map配置
   if('optimization' in options) conf.optimization = options.optimization;   // 合并optimization
 
   return conf;

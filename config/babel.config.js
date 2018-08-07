@@ -2,19 +2,6 @@
 const path = require('path');
 const process = require('process');
 
-function output(env){
-  switch(env){
-    case 'development': // 开发环境
-      return true;
-    case 'production':  // 生产环境
-      return false;
-  }
-}
-
-// 根据当前环境配置debug
-const env = process.env.NODE_ENV;
-const debug = output(env);
-
 const presets = [
   [
     '@babel/preset-env',
@@ -57,7 +44,7 @@ const plugins = [
 ];
 
 // 热替换插件
-if(debug) plugins.unshift('react-hot-loader/babel');
+if(process.env.NODE_ENV === 'development') plugins.unshift('react-hot-loader/babel');
 
 module.exports = {
   loader: 'babel-loader',
