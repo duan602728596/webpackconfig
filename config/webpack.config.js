@@ -6,8 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const babelConfig = require('./babel.config');
 
 function config(options){
+  const { NODE_ENV } = process.env;
+  const fileName = NODE_ENV === 'development' ? '[name].[ext]' : '[hash:5].[ext]';
   const conf = {
-    mode: process.env.NODE_ENV,
+    mode: NODE_ENV,
     entry: {
       app: [path.join(__dirname, '../src/app.js')]
     },
@@ -31,13 +33,13 @@ function config(options){
           ]
         },
         { // 图片
-          test: /^.*\.(jpg|png|gif)$/,
+          test: /^.*\.(jpg|jpeg|png|gif)$/,
           use: [
             {
               loader: 'url-loader',
               options: {
                 limit: 3000,
-                name: '[name].[hash:5].[ext]',
+                name: fileName,
                 outputPath: 'image/'
               }
             }
@@ -60,7 +62,7 @@ function config(options){
             {
               loader: 'file-loader',
               options: {
-                name: '[name].[hash:5].[ext]',
+                name: fileName,
                 outputPath: 'file/'
               }
             }
@@ -97,7 +99,7 @@ function config(options){
   conf.output = options.output;                                             // 合并输出目录
   if('devtool' in options) conf.devtool = options.devtool;                  // 合并source-map配置
   if('optimization' in options) conf.optimization = options.optimization;   // 合并optimization
-  
+
   return conf;
 }
 
