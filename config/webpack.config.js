@@ -7,8 +7,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const babelConfig = require('./babel.config');
 
 function config(options){
+  const { NODE_ENV } = process.env;
+  const fileName = NODE_ENV === 'development' ? '[name].[ext]' : '[hash:5].[ext]';
   const conf = {
-    mode: process.env.NODE_ENV,
+    mode: NODE_ENV,
     entry: {
       app: [path.join(__dirname, '../src/app.js')]
     },
@@ -29,20 +31,20 @@ function config(options){
             {
               loader: 'file-loader',
               options: {
-                name: '[name].[hash:5].[ext]',
+                name: fileName,
                 outputPath: 'script/'
               }
             }
           ]
         },
         { // 图片
-          test: /^.*\.(jpg|png|gif)$/,
+          test: /^.*\.(jpg|jpeg|png|gif)$/,
           use: [
             {
               loader: 'url-loader',
               options: {
                 limit: 3000,
-                name: '[name].[hash:5].[ext]',
+                name: fileName,
                 outputPath: 'image/'
               }
             }
@@ -65,7 +67,7 @@ function config(options){
             {
               loader: 'file-loader',
               options: {
-                name: '[name].[hash:5].[ext]',
+                name: fileName,
                 outputPath: 'file/'
               }
             }
@@ -77,7 +79,7 @@ function config(options){
             {
               loader: 'pug-loader',
               options: {
-                pretty: process.env.NODE_ENV === 'development',
+                pretty: NODE_ENV === 'development',
                 name: '[name].html'
               }
             }
@@ -90,7 +92,7 @@ function config(options){
       new HtmlWebpackPlugin({
         inject: true,
         template: path.join(__dirname, '../src/index.pug'),
-        NODE_ENV: process.env.NODE_ENV
+        NODE_ENV
       }),
       new VueLoaderPlugin(),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
