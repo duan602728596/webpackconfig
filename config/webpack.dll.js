@@ -18,7 +18,8 @@ module.exports = {
       'immutable',
       'redux-immutable',
       'reselect',
-      'react-helmet'
+      'react-helmet',
+      'react-loadable'
     ]
   },
   output: {
