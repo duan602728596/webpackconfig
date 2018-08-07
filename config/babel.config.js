@@ -44,7 +44,7 @@ const plugins = [
 ];
 
 // 热替换插件
-if(process.env.NODE_ENV === 'development') plugins.unshift('react-hot-loader/babel');
+if(process.env.NODE_ENV === 'development') plugins.push('react-hot-loader/babel');
 
 module.exports = {
   loader: 'babel-loader',
