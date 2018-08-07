@@ -74,7 +74,7 @@ function config(options){
             {
               loader: 'pug-loader',
               options: {
-                pretty: process.env.NODE_ENV === 'development',
+                pretty: NODE_ENV === 'development',
                 name: '[name].html'
               }
             }
@@ -87,7 +87,7 @@ function config(options){
       new HtmlWebpackPlugin({
         inject: true,
         template: path.join(__dirname, '../src/index.pug'),
-        NODE_ENV: process.env.NODE_ENV
+        NODE_ENV
       }),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
     ]
