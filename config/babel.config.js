@@ -1,5 +1,6 @@
 /* babel-loader 配置 */
 const path = require('path');
+const process = require('process');
 
 const presets = [
   [
@@ -11,7 +12,7 @@ const presets = [
         chrome: 40,
         firefox: 40
       },
-      debug: debug,
+      debug: process.env.NODE_ENV === 'development',
       modules: false,
       useBuiltIns: 'usage'
     }
