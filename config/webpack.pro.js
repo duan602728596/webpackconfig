@@ -1,6 +1,5 @@
 /* 生产环境 */
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssets = require('optimize-css-assets-webpack-plugin');
 const config = require('./webpack.config');
