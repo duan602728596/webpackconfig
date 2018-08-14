@@ -15,4 +15,8 @@
 node-sass如果安装失败，可以先到[https://github.com/sass/node-sass/releases](https://github.com/sass/node-sass/releases)下载**binding.node**文件，然后将该文件添加到**SASS_BINARY_PATH**环境变量内。
 
 ### 关于https证书
-证书重命名为server，并且放在当前目录下就可以了。
+
+开发环境下的证书安装，参考[https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)。
+
+* 开发环境下的证书，命名为`dev.*`，放在当前目录。
+* 生产环境下的证书，命名为`server.*`，放在当前目录。
