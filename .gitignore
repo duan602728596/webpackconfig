@@ -17,3 +17,7 @@ build
 
 # babel
 .babelCache
+
+# https
+*.crt
+*.key
