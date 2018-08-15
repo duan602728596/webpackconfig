@@ -65,22 +65,17 @@ function readFile(file){
 
   /* 静态文件 */
   router.get(/^.*\.[a-zA-Z0-9]+$/, async(ctx, next)=>{
-    try{
-      const pathFile = ctx.path;
-      const file = path.join(serverFile, pathFile);
+    const pathFile = ctx.path;
+    const file = path.join(serverFile, pathFile);
 
-      if(fs.existsSync(file)){
-        ctx.status = 200;
-        ctx.type = mime.lookup(file);
-        ctx.body = await readFile(file);
-      }else{
-        ctx.status = 404;
-      }
-    }catch(err){
-      ctx.status = 500;
-      ctx.type = 'text/plain';
-      ctx.body = err;
+    if(fs.existsSync(file)){
+      ctx.status = 200;
+      ctx.type = mime.lookup(file);
+      ctx.body = await readFile(file);
+    }else{
+      ctx.status = 404;
     }
+
     await next();
   });
 
