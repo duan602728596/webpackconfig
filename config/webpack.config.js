@@ -40,14 +40,19 @@ function config(options){
           ]
         },
         { // 图片
-          test: /^.*\.(jpg|jpeg|png|gif)$/,
+          test: /^.*\.(jpe?g|png|gif)$/,
           use: [
             {
               loader: 'url-loader',
               options: {
-                limit: 3000,
-                name: fileName,
-                outputPath: 'image/'
+                limit: 8192,
+                fallback: {
+                  loader: 'file-loader',
+                  options: {
+                    name: fileName,
+                    outputPath: 'image/'
+                  }
+                }
               }
             }
           ]
@@ -64,7 +69,7 @@ function config(options){
           ]
         },
         { // 矢量图片 & 文字
-          test: /^.*\.(eot|svg|ttf|woff|woff2)$/,
+          test: /^.*\.(eot|svg|ttf|woff2?)$/,
           use: [
             {
               loader: 'file-loader',
