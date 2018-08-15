@@ -60,7 +60,7 @@ function readFile(file){
 
     ctx.status = 200;
     ctx.type = 'text/html';
-    ctx.body = body;
+    ctx.body = await preRender(body, ctx.path, ctx);
 
     await next();
   });
