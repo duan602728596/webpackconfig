@@ -55,7 +55,8 @@ function config(){
                   loader: 'file-loader',
                   options: {
                     name: fileName,
-                    outputPath: 'image/'
+                    outputPath: 'image/',
+                    emitFile: false
                   }
                 }
               }
@@ -69,7 +70,8 @@ function config(){
               loader: 'file-loader',
               options: {
                 name: fileName,
-                outputPath: 'file/'
+                outputPath: 'file/',
+                emitFile: false
               }
             }
           ]
