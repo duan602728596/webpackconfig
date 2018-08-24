@@ -82,7 +82,9 @@ function config(){
   };
 
   if(!isDevelopment){
-    conf.optimization.minimizer = [new TerserPlugin()];
+    conf.optimization = {
+      minimizer: [new TerserPlugin()]
+    };
   }
 
   return conf;
