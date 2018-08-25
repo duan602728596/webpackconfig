@@ -12,7 +12,7 @@ const middlewares: Function = applyMiddleware(thunk);
 
 let store: ?Object = null;
 
-function storeFactory(initialState: ?Object): Object{
+export function storeFactory(initialState: ?Object): Object{
   /* initialState */
   const $$initialState: Immutable.Map = Map(fromJS(initialState));
 
@@ -23,7 +23,7 @@ function storeFactory(initialState: ?Object): Object{
   return store;
 }
 
-export default storeFactory;
+export default store;
 
 /* 注入store */
 export function injectReducers(asyncReducer: Object): void{

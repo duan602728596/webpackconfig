@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter, Switch } from 'react-router';
 import { Provider } from 'react-redux';
-import storeFactory from './store/store';
+import { storeFactory } from './store/store';
 import './common.sass';
 import ServerRouters from './router/ServerRouters';
 
