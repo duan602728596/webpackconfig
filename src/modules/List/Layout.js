@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import Helmet from 'react-helmet';
-import { Icon } from 'antd';
 import Main from '../../assembly/Main/index';
 import Sider from '../../assembly/Sider/index';
 import Content from '../../assembly/Content/index';
-import icon from '../../assembly/Icon/style.sass';
 import Index from './Index/index';
 
 /* 配置二、三级导航菜单 */
@@ -27,14 +25,12 @@ const options: {
   {
     id: 's1',
     name: '导航菜单1',
-    url: '/List/S1',
-    icon: <Icon type="area-chart" />
+    url: '/List/S1'
   },
   {
     id: 's2',
     name: '导航菜单2',
-    url: '/List/S2',
-    icon: icon.cog
+    url: '/List/S2'
   },
   {
     id: 's3',

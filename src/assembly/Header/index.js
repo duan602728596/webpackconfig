@@ -5,8 +5,8 @@
  */
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Icon } from 'antd';
 import style from './style.sass';
-import icon from '../Icon/style.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
 import HumanInformation from './HumanInformation';
 
@@ -14,7 +14,7 @@ type options = {
   id: string,
   name: string,
   href: string,
-  icon: string
+  icon: ?(string | React.Element)
 };
 
 export const navOptions: options[] = [
@@ -22,19 +22,19 @@ export const navOptions: options[] = [
     id: 'home',
     name: '主页',
     href: '/Index',
-    icon: icon['home']
+    icon: <Icon className={ style.icon } type="home" theme="outlined" />
   },
   {
     id: 'list',
     name: '列表',
     href: '/List',
-    icon: icon['cog']
+    icon: <Icon className={ style.icon } type="bars" theme="outlined" />
   },
   {
     id: 'form',
     name: '表单',
     href: '/Form',
-    icon: icon['users']
+    icon: <Icon className={ style.icon } type="table" theme="outlined" />
   }
 ];
 
@@ -56,7 +56,15 @@ class Header extends Component{
       return (
         <li key={ item.id }>
           <NavLink to={ item.href } activeClassName={ style.navActive } isActive={ this.oddEvent.bind(this, item) }>
-            <i className={ item.icon } />
+            {
+              do{
+                if(item.icon){
+                  typeof item.icon === 'string'
+                    ? <i className={ item.icon } />
+                    : item.icon;
+                }
+              }
+            }
             <span>{ item.name }</span>
           </NavLink>
         </li>
