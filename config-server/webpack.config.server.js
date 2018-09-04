@@ -38,7 +38,7 @@ function config(){
           exclude: /(dll\.js|node_modules)/
         },
         { // sass
-          test: /^.*\.sass$/,
+          test: /^.*\.s(a|c)ss$/,
           use: [cssConfig, postCssConfig, sassConfig]
         },
         { // css
@@ -65,7 +65,7 @@ function config(){
           ]
         },
         { // 矢量图片 & 文字
-          test: /^.*\.(eot|svg|ttf|woff|woff2)$/,
+          test: /^.*\.(eot|svg|ttf|woff2?)$/,
           use: [
             {
               loader: 'file-loader',
