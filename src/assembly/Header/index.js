@@ -5,6 +5,7 @@
  */
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 import { Icon } from 'antd';
 import style from './style.sass';
 import ErrorBoundary from '../ErrorBoundary/index';
@@ -76,7 +77,7 @@ class Header extends Component{
       <ErrorBoundary>
         <img className={ style.logo } src={ require('./logo.png') } alt="管理平台 demo" title="管理平台 demo" />
         <nav className={ style.nav }>
-          <ul className="clearfix">
+          <ul className={ classNames(style.navList, 'clearfix') }>
             { this.navList(navOptions) }
           </ul>
         </nav>
