@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { hot } from 'react-hot-loader';
-import store from './store/store';
+import { storeFactory } from './store/store';
 import './common.sass';
 import Layout from './assembly/Layout';
 
@@ -13,7 +13,7 @@ import Layout from './assembly/Layout';
 class App extends Component{
   render(): React.Element{
     return (
-      <Provider store={ store }>
+      <Provider store={ storeFactory(window.__INITIAL_STATE__ || {}) }>
         <LocaleProvider locale={ zhCN }>
           <BrowserRouter>
             <Switch>

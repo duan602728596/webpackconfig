@@ -7,15 +7,23 @@ import { createReducer } from './reducers';
 /* reducer列表 */
 const reducer: Function = createReducer({});
 
-/* initialState */
-const $$initialState: Immutable.Map = Map();
-
 /* 中间件 */
 const middlewares: Function = applyMiddleware(thunk);
 
 /* store */
-const store: Object = createStore(reducer, $$initialState, compose(middlewares));
-store.asyncReducers = {};
+const store: Object = {
+  asyncReducers: {}
+};
+
+export function storeFactory(initialState: ?Object): Object{
+  /* initialState */
+  const $$initialState: Immutable.Map = Map(fromJS(initialState));
+
+  /* store */
+  Object.assign(store, createStore(reducer, $$initialState, compose(middlewares)));
+
+  return store;
+}
 
 export default store;
 
