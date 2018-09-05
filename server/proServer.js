@@ -80,7 +80,7 @@ function readFile(file){
   });
 
   /* http服务 */
-  http.createServer(app.callback()).listen(process.env.HTTP_SERVER_PORT || 5052);
+  http.createServer(app.callback()).listen(process.env.HTTP_SERVER_PORT || 80);
 
   /* https服务 */
   const key = path.join(__dirname, '../server.key');
