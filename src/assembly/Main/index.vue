@@ -9,15 +9,5 @@
   </el-container>
 </template>
 
-<script type="text/javascript">
-  export default {
-    name: 'Main'
-  };
-</script>
-
-<style lang="scss" scoped>
-  .main {
-    height: calc(100% - 80px);
-    background-color: #fff;
-  }
-</style>
+<script src="./index.js"></script>
+<style src="./style.sass" scoped></style>

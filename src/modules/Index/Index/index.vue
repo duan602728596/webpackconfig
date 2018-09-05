@@ -6,15 +6,4 @@
   </div>
 </template>
 
-<script type="text/javascript">
-  export default {
-    data(): Object{
-      return {};
-    },
-    methods: {
-      handleAddState(){
-        this.$store.dispatch('index/add');
-      }
-    }
-  };
-</script>
+<script src="./index.js"></script>

@@ -20,7 +20,7 @@ function config(options){
       rules: [
         { // js
           test: /^.*\.js$/,
-          use: [babelConfig, 'eslint-loader'],
+          use: [babelConfig],
           exclude: /(dll\.js|node_modules)/
         },
         { // vue

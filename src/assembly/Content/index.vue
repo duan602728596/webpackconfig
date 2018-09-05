@@ -10,15 +10,5 @@
   </el-main>
 </template>
 
-<script type="text/javascript">
-  export default {
-    name: 'Content'
-  };
-</script>
-
-<style lang="scss" scoped>
-  .content {
-    padding: 10px;
-    overflow: auto;
-  }
-</style>
+<script src="./index.js"></script>
+<style src="./style.sass" scoped></style>

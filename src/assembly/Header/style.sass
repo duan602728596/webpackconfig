@@ -1,0 +1,53 @@
+.header
+  color: #fff
+  background-color: #0d96ea
+.logo, .nav
+  position: absolute
+.logo
+  left: 10px
+  top: 12px
+  height: 25px
+.nav, .nav ul, .nav li, .nav a
+  height: 50px
+.nav
+  top: 0
+  left: 180px
+  li
+    float: left
+  a
+    display: block
+    padding: 0 11px
+    font-size: 16px
+    line-height: 50px
+    color: #fff
+    -webkit-transition: color .5s, background-color .5s
+    transition: color .5s, background-color .5s
+    &:hover
+      text-decoration: none
+    &.navActive
+      background-color: rgb(34, 91, 238)
+      text-decoration: none
+  span
+    margin-left: 4px
+    vertical-align: 2px
+
+/* human information */
+.humanInformation
+  position: absolute
+  right: 30px
+  top: 14px
+  line-height: 16px
+.human, .username
+  cursor: default
+.human
+  font-size: 18px
+.username
+  margin: 0 20px 0 5px
+  font-size: 14px
+  vertical-align: 2px
+.tools
+  border: none
+  font-size: 16px
+  background-color: transparent
+  color: #fff
+  cursor: pointer

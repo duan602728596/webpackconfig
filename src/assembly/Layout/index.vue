@@ -13,25 +13,5 @@
   </el-container>
 </template>
 
-<script type="text/javascript">
-  import Header from '../Header/index.vue';
-
-  export default {
-    name: 'Layout',
-    components: {
-      Header
-    }
-  };
-</script>
-
-<style lang="scss" scoped>
-  .layout {
-    height: 100%;
-  }
-  .footer {
-    line-height: 30px;
-    font-size: 12px;
-    background-color: #ddd;
-    text-align: center;
-  }
-</style>
+<script src="./index.js"></script>
+<style src="./style.sass" scoped></style>

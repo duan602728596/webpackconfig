@@ -25,30 +25,5 @@
   </el-aside>
 </template>
 
-<script type="text/javascript">
-  export default {
-    name: 'Sider',
-    props: ['options']
-  };
-</script>
-
-<style lang="scss" scoped>
-  .sider {
-    overflow-x: hidden;
-    overflow-y: auto;
-    border-right: 1px solid #e9e9e9;
-    background-color: transparent;
-  }
-  .item {
-    padding: 0;
-  }
-  .link {
-    display: block;
-    height: 100%;
-    padding: 0 21px;
-    color: #0d96ea;
-    &:hover {
-      text-decoration: none
-    }
-  }
-</style>
+<script src="./index.js"></script>
+<style src="./style.sass" scoped></style>
