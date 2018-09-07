@@ -68,7 +68,7 @@
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.6",
     "react-loadable": "^5.5.0",
-    "react-redux": "^5.1.0-test.1",
+    "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
