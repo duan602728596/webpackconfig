@@ -1,6 +1,6 @@
 /* 开发环境 服务器 */
 const http = require('http');
-const https = require('https');
+const http2 = require('http2');
 const fs = require('fs');
 const process = require('process');
 const path = require('path');
@@ -50,7 +50,8 @@ const router = new Router();
   const key = path.join(__dirname, '../dev.key');
   const crt = path.join(__dirname, '../dev.crt');
   if(fs.existsSync(key) && fs.existsSync(crt)){
-    https.createServer({
+    http2.createServer({
+      allowHTTP1: true,
       key: fs.readFileSync(key),
       cert: fs.readFileSync(crt)
     }, app.callback()).listen(process.env.HTTPS_SERVER_PORT || 5051);
