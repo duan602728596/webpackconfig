@@ -50,7 +50,7 @@ const router = new Router();
   const key = path.join(__dirname, '../dev.key');
   const crt = path.join(__dirname, '../dev.crt');
   if(fs.existsSync(key) && fs.existsSync(crt)){
-    http2.createServer({
+    http2.createSecureServer({
       allowHTTP1: true,
       key: fs.readFileSync(key),
       cert: fs.readFileSync(crt)

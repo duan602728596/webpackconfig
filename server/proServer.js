@@ -86,7 +86,7 @@ function readFile(file){
   const key = path.join(__dirname, '../server.key');
   const crt = path.join(__dirname, '../server.crt');
   if(fs.existsSync(key) && fs.existsSync(crt)){
-    http2.createServer({
+    http2.createSecureServer({
       allowHTTP1: true,
       key: await readFile(key),
       cert: await readFile(crt)
