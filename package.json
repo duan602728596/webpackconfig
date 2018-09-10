@@ -36,7 +36,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@svgr/webpack": "^2.3.0",
-    "antd": "^3.9.1",
+    "antd": "^3.9.2",
     "autoprefixer": "^9.1.5",
     "axios": "^0.18.0",
     "babel-eslint": "^9.0.0",
