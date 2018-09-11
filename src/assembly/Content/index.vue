@@ -5,9 +5,9 @@
     组件用于展示页面的内容
     默认padding为10px
   -->
-  <el-main class="content">
+  <iview-content class="content">
     <slot />
-  </el-main>
+  </iview-content>
 </template>
 
 <script src="./index.js"></script>

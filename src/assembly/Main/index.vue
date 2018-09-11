@@ -4,9 +4,9 @@
     页面中部内容布局
     包含左侧的菜单Sider和右侧的内容Content
   -->
-  <el-container class="main">
+  <iview-layout class="main">
     <slot />
-  </el-container>
+  </iview-layout>
 </template>
 
 <script src="./index.js"></script>

@@ -33,10 +33,10 @@ const plugins = [
   '@babel/plugin-proposal-class-properties',
   "@babel/plugin-syntax-dynamic-import",
   [
-    'component',
+    'import',
     {
-      libraryName: 'element-ui',
-      styleLibraryName: 'theme-chalk'
+      libraryName: 'iview',
+      libraryDirectory: 'src/components'
     }
   ]
 ];
