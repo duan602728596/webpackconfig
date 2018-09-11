@@ -4,7 +4,7 @@
     顶部header布局
     显示logo、导航、登录人信息等
    -->
-  <iview-header class="header">
+  <i-header class="header">
     <img class="logo" src="./logo.png" alt="管理平台 demo" title="管理平台 demo">
     <nav class="nav">
       <ul class="clearfix">
@@ -17,7 +17,7 @@
       </ul>
     </nav>
     <HumanInformation />
-  </iview-header>
+  </i-header>
 </template>
 
 <script src="./index.js"></script>

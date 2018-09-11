@@ -6,11 +6,11 @@
     Footer 显示版权信息
     Routers 根据路由渲染页面
    -->
-  <iview-layout class="layout">
+  <i-layout class="layout">
     <Header />
     <router-view />
-    <iview-footer class="footer">版权所有</iview-footer>
-  </iview-layout>
+    <i-footer class="footer">版权所有</i-footer>
+  </i-layout>
 </template>
 
 <script src="./index.js"></script>
