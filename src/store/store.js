@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue';
 import Vuex from 'vuex/dist/vuex';
-import index from '../modules/Index/store/index';
+import modules from './modules';
 
 Vue.use(Vuex);
 
@@ -13,13 +13,10 @@ export function storeFactory(initialState: ?Object): Object{
     getters: {
       getInitialStateData: (state: Object): Function => (key: string): number => state[key]
     },
-    modules: {
-      index
-    }
+    modules
   }));
 
   return store;
 }
-
 
 export default store;
