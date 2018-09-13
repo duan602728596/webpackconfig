@@ -5,7 +5,6 @@ import { storeFactory } from './store/store';
 import routers from './router/routers';
 import './common.sass';
 
-
 /* app */
 const app: Vue = new Vue({
   el: '#vue-app',
