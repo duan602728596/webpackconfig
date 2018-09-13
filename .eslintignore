@@ -1,0 +1,9 @@
+server
+service
+node_modules
+config
+config-server
+bin
+.dll
+build
+build-server
