@@ -1,5 +1,5 @@
 {
-  "name": "WebpackConfig-vue",
+  "name": "WebpackConfig-Vue",
   "description": "webpack + vue配置",
   "license": "MIT",
   "scripts": {
