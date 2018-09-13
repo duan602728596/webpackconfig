@@ -1,6 +1,6 @@
 <template>
   <Main>
-    <Title title="Page" />
+    <vue-helmet title="Page"></vue-helmet>
     <Sider v-bind:options="options" />
     <Content>
       <div>Page</div>
@@ -57,8 +57,7 @@
     components: {
       Main,
       Sider,
-      Content,
-      Title
+      Content
     },
     data(): Object{
       return {
