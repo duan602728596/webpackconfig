@@ -1,6 +1,8 @@
 <template>
   <Main>
-    <vue-helmet title="Page"></vue-helmet>
+    <helmet-provider>
+      <helmet title="Page"></helmet>
+    </helmet-provider>
     <Sider v-bind:options="options" />
     <Content>
       <div>Page</div>

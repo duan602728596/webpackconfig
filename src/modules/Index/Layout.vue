@@ -1,6 +1,8 @@
 <template>
   <Main>
-    <vue-helmet title="网站title"></vue-helmet>
+    <helmet-provider>
+      <helmet title="网站title"></helmet>
+    </helmet-provider>
     <Content>
       <Index />
     </Content>
