@@ -9,10 +9,10 @@ const routers: VueRouter = new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/Home'
+      redirect: '/Index'
     },
     {
-      path: '/Home',
+      path: '/Index',
       name: 'index',
       component: Index
     },

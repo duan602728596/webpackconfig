@@ -10,9 +10,9 @@ type options = {
 
 export const navOptions: options[] = [
   {
-    id: 'home',
+    id: 'index',
     name: '主页',
-    href: '/Home',
+    href: '/Index',
     icon: icon['home']
   },
   {
