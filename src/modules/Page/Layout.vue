@@ -14,7 +14,6 @@
   import Main from '../../assembly/Main/index.vue';
   import Sider from '../../assembly/Sider/index.vue';
   import Content from '../../assembly/Content/index.vue';
-  import Title from '../../assembly/Title/index.vue';
 
   /* 配置二、三级导航菜单 */
   const options: {
